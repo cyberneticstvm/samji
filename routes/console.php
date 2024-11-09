@@ -7,5 +7,5 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote')->hourly();
 
-/*Artisan::command('snapshot:create ' . time())->hourly();
-Artisan::command('snapshot:cleanup --keep=5')->hourly();*/
+//Artisan::command('snapshot:create ' . time())->hourly();
+//Artisan::command('snapshot:cleanup --keep=5')->hourly();
