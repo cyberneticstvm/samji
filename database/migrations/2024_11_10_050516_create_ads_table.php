@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('ads', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 50)->unique();
-            $table->string('icon', 50)->nullable();
-            $table->string('route')->nullable();
-            $table->string('ad_post_route')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('ads');
     }
 };

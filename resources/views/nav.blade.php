@@ -48,7 +48,9 @@
                         </aside>
                         <!-- End::app-sidebar -->
                         <ul class="mb-0 gap-2 list-unstyled d-xl-inline-flex flex-shrink-0 d-none">
-                            <li aria-haspopup="true" class=""> <span><a class="btn btn-primary" href="#"><i class="fe fe-plus-circle me-2"></i>Post Free Ad</a></span> </li>
+                            <li aria-haspopup="true" class=""> <span>
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoryModal"><i class="fe fe-plus-circle me-2"></i>Post Free Ad</button>
+                                </span> </li>
                             @auth
                             <li aria-haspopup="true" class=""> <span><a class="btn btn-secondary" href="{{ route('logout') }}"><i class="fe fe-log-in me-2"></i>Sign Out</a></span> </li>
                             @else

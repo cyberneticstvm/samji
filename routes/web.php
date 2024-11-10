@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
@@ -35,5 +36,11 @@ Route::middleware(['web'])->group(function () {
 Route::middleware(['web', 'auth'])->group(function () {
     Route::prefix('')->controller(WebController::class)->group(function () {
         Route::get('/logout', 'logout')->name('logout');
+    });
+    Route::prefix('/post/ad')->controller(AdController::class)->group(function () {
+        Route::get('/realestate', 'viewFormRealEstate')->name('post.ad.real.estate');
+        Route::post('/realestate', 'saveAdRealEstate')->name('post.ad.real.estate.save');
+        Route::get('/matrimonial', 'viewFormMatrimonial')->name('post.ad.matrimonial');
+        Route::post('/matrimonial', 'saveAdMatrimonial')->name('post.ad.matrimonial.save');
     });
 });

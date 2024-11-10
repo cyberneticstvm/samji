@@ -8904,5 +8904,9 @@ a.link-underline-dark {
 .cat-img i{
   font-size: xxx-large !important;
 }
+.select2-container--default .select2-selection--single{
+  height: 40px !important;
+  border: 1px solid #eee !important;
+}
 
 /* End:: Extras */

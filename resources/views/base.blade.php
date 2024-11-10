@@ -27,6 +27,7 @@
     <link href="{{ asset('/assets/css/icons.css') }}" rel="stylesheet">
     <!-- Choices Css -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- Swiper CSS-->
     <link rel="stylesheet" href="{{ asset('/assets/libs/swiper/swiper-bundle.min.css') }}">
     <!-- Main Theme Js -->
@@ -125,6 +126,39 @@
     <!-- Scroll To Top -->
     <div class="scrollToTop rounded-circle shadow all-ease-03 fade-in"> <i class="fa fa-up-long"></i> </div>
     <!-- Scroll To Top --> <!-- Bootstrap js -->
+    <div id="categoryModal" class="modal fade">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="categoryModalLabel">Select a Category</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-sm-6">
+                    <div>
+                        <div class="row">
+                            @forelse(categories() as $key => $category)
+                            <div class="col-md-3">
+                                <div class="card cat-card">
+                                    <div class="card-body">
+                                        <div class="cat-item">
+                                            <a aria-label="anchor" href="{{ $category->ad_post_route ? route($category->ad_post_route) : '#' }}"></a>
+                                            <div class="cat-img">
+                                                <i class="{{ $category->icon }} text-primary"></i>
+                                            </div>
+                                            <div class="cat-desc">
+                                                <p class="fw-bold">{{ $category->name }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @empty
+                            @endforelse
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script
         src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -143,7 +177,7 @@
 
     <script src="{{ asset('/assets/libs/@simonwep/pickr/pickr.es5.min.js') }}"></script>
 
-    <script src="{{ asset('/assets/js/picker.js') }}"></script>
+    <!--<script src="{{ asset('/assets/js/picker.js') }}"></script>-->
     <!-- Swiper JS -->
 
     <script src="{{ asset('/assets/libs/swiper/swiper-bundle.min.js') }}"></script>
@@ -158,6 +192,10 @@
     <script src="{{ asset('/assets/js/custom.js') }}"></script>
 
     <script src="{{ asset('/assets/js/custom-switcher.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="{{ asset('/assets/js/script.js') }}"></script>
 
     @include("message")
 </body>
