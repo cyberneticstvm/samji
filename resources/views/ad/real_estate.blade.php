@@ -24,6 +24,7 @@
                 <div class="card-body p-sm-6">
                     <div class="form-horizontal">
                         <div class="row">
+                            <input type="hidden" name="category_id" value="{{ $category->id }}" />
                             <div class="col-sm-12 mb-3">
                                 <label class="mb-2 form-label">Ad Title <span class="text-danger ms-1">*</span></label>
                                 {{ html()->text('title', old('title'))->class("form-control ms-0")->maxlength('150')->placeholder("Ad Title") }}
@@ -50,15 +51,58 @@
                                 <div class="d-md-flex">
                                     @forelse($extras->where('name', 'category') as $key => $item)
                                     <div class="form-check me-4">
-                                        {{ html()->radio('flexRadioDefault')->class('form-check-input')->attribute('id', 'flexRadioDefault_'.$item->id)->attribute('value', $item->id)->checked() }}
+                                        {{ html()->radio('category')->class('form-check-input')->attribute('id', 'flexRadioDefault_'.$item->id)->attribute('value', $item->id)->checked() }}
                                         <label class="form-check-label" for="flexRadioDefault_{{ $item->id }}"> {{ $item->value }} </label>
                                     </div>
                                     @empty
                                     @endforelse
                                 </div>
                             </div>
-                            @include('ad.section.fields_re')
-                            <div class="col-sm-6 mb-3">
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">No. of Beds</label>
+                                {{ html()->number('number_of_beds', old('number_of_beds'))->class("form-control ms-0")->placeholder("0") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">No. of Baths</label>
+                                {{ html()->number('number_of_baths', old('number_of_baths'))->class("form-control ms-0")->placeholder("0") }}
+                            </div>
+                            <div class="col-xl-4 mb-3">
+                                <label class="mb-2 form-label">No. of Washrooms </label><span class="text-primary small">(Applicable for Shop & Offices)</span>
+                                {{ html()->number('number_of_washrooms', old('number_of_washrooms'))->class("form-control ms-0")->placeholder("0") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Furnished</label>
+                                {{ html()->select('furnished', $extras->where('name', 'furnish')->pluck('value', 'id'), old('furnished'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Buildup Area (Sqft)</label>
+                                {{ html()->number('buildup_area', old('buildup_area'))->class("form-control ms-0")->placeholder("0") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Carpet Area (Sqft)</label>
+                                {{ html()->number('carpet_area', old('carpet_area'))->class("form-control ms-0")->placeholder("0") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Number of Floors</label>
+                                {{ html()->number('number_of_floors', old('number_of_floors'))->class("form-control ms-0")->placeholder("0") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Number of Car Parkings</label>
+                                {{ html()->number('number_of_parkings', old('number_of_parkings'))->class("form-control ms-0")->placeholder("0") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Facing</label>
+                                {{ html()->select('facing', $extras->where('name', 'facing')->pluck('value', 'id'), old('facing'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                            </div>
+                            <div class="col-xl-4 mb-3">
+                                <label class="mb-2 form-label">Project Name</label>
+                                {{ html()->text('project_name', old('project_name'))->class("form-control ms-0")->placeholder("Project Name") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Price (₹)</label>
+                                {{ html()->number('price', old('price'), $min='1', '', $step=1)->class("form-control ms-0")->placeholder("0.00") }}
+                            </div>
+                            <div class="col-sm-4 mb-3">
                                 <label class="mb-2 form-label">Location</label>
                                 {{ html()->text('location', old('location'))->class("form-control ms-0")->maxlength('150')->placeholder("Location") }}
                                 @error('location')
@@ -86,11 +130,28 @@
                                 <small class="text-danger">{{ $errors->first('district') }}</small>
                                 @enderror
                             </div>
-                            <div class="col-sm-12 mb-3">
-                                <label class="mb-2 form-label">Images (Multiple selection enabled)</label>
-                                {{ html()->file('images')->class("form-control ms-0")->multiple(); }}
+                            <div class="row mt-3 mb-3">
+                                <div class="col-xl-12 mb-3">
+                                    <span class="text-primary">Applicable for Land & plots</span>
+                                </div>
+                                <div class="col-xl-2 mb-3">
+                                    <label class="mb-2 form-label">Plot Area </label>
+                                    {{ html()->number('plot_area', old('plot_area'))->class("form-control ms-0")->placeholder("0") }}
+                                </div>
+                                <div class="col-xl-2 mb-3">
+                                    <label class="mb-2 form-label">Length</label>
+                                    {{ html()->number('length', old('length'))->class("form-control ms-0")->placeholder("0") }}
+                                </div>
+                                <div class="col-xl-2 mb-3">
+                                    <label class="mb-2 form-label">Breadth</label>
+                                    {{ html()->number('breadth', old('breadth'))->class("form-control ms-0")->placeholder("0") }}
+                                </div>
                             </div>
-                            <div class="col-sm-12 preview">
+                            <div class="col-sm-12 mb-3">
+                                <label class="mb-2 form-label">Images </label><span class="text-primary small">(Multiple selection enabled. Recommended size is 950px width & 488px height with .webp type and up to 10 images less than 200kb each)</span>
+                                {{ html()->file('images[]')->class("form-control ms-0 multi_img")->multiple()->required() }}
+                            </div>
+                            <div class="col-sm-12" id="multi_img">
 
                             </div>
                             <div class="col-xl-12 mt-5">

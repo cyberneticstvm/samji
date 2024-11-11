@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('ad_images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('ad_id');
+            $table->string('image_url')->nullable();
             $table->timestamps();
         });
     }

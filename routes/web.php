@@ -32,6 +32,9 @@ Route::middleware(['web'])->group(function () {
         Route::get('/health-and-hospitals', 'healthHospital')->name('category.health.hospital');
         Route::get('/services', 'service')->name('category.service');
     });
+    Route::prefix('')->controller(CategoryController::class)->group(function () {
+        Route::get('/{category}/{id}/{slug}', 'realEstateDetail')->name('category.real.estate.detail');
+    });
 });
 Route::middleware(['web', 'auth'])->group(function () {
     Route::prefix('')->controller(WebController::class)->group(function () {

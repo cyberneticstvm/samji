@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ad;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
@@ -19,7 +20,14 @@ class CategoryController extends Controller
     {
         $page_title = 'Samji Web Portal';
         $category = Category::where('route', $request->route()->getName())->first();
-        return view('category.real-estate', compact('page_title', 'category'));
+        $items = Ad::where('category_id', $category->id)->where('status', 'pending')->orderByDesc('id')->paginate(10);
+        return view('category.real_estate', compact('page_title', 'category', 'items'));
+    }
+
+    function realEstateDetail(string $category, string $id, string $slug)
+    {
+        $ad = Ad::findOrFail($id);
+        return view('category.real_estate_detail', compact('ad'));
     }
 
     function matrimonial(Request $request)

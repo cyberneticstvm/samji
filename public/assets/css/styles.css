@@ -8908,5 +8908,8 @@ a.link-underline-dark {
   height: 40px !important;
   border: 1px solid #eee !important;
 }
+.pagination .text-muted{
+  display: none !important;
+}
 
 /* End:: Extras */
