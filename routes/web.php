@@ -40,7 +40,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::prefix('')->controller(WebController::class)->group(function () {
         Route::get('/logout', 'logout')->name('logout');
     });
-    Route::prefix('/post/ad')->controller(AdController::class)->group(function () {
+    Route::prefix('post/ad')->controller(AdController::class)->group(function () {
         Route::get('/realestate', 'viewFormRealEstate')->name('post.ad.real.estate');
         Route::post('/realestate', 'saveAdRealEstate')->name('post.ad.real.estate.save');
         Route::get('/matrimonial', 'viewFormMatrimonial')->name('post.ad.matrimonial');
