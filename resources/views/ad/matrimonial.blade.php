@@ -13,5 +13,143 @@
         <use xlink:href="#svg-shape"></use>
     </svg> <!--Shape End-->
 </section>
+<section class="section">
+    <div class="container">
+        <div class="heading-section">
+            <div class="heading-title">Post your <span class="text-primary">Profile</span></div>
+        </div>
+        {{ html()->form('POST', route('post.ad.matrimonial.save'))->class('row justify-content-center align-items-center needs-validation')->attribute('id', 'myForm')->acceptsFiles()->open() }}
+        <div class="col-xl-12 col-lg-12">
+            <div class="card border mb-0">
+                <div class="card-body p-sm-6">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <input type="hidden" name="category_id" value="{{ $category->id }}" />
+                            <div class="col-sm-4 mb-3">
+                                <label class="mb-2 form-label">Full Name <span class="text-danger ms-1">*</span></label>
+                                {{ html()->text('name', old('name'))->class("form-control ms-0")->maxlength('50')->placeholder("Full Name") }}
+                                @error('name')
+                                <small class="text-danger">{{ $errors->first('name') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-2 mb-3">
+                                <label class="mb-2 form-label">Date of Birth <span class="text-danger ms-1">*</span></label>
+                                {{ html()->date('dob', old('dob') ?? date('Y-m-d'))->class("form-control ms-0") }}
+                                @error('dob')
+                                <small class="text-danger">{{ $errors->first('dob') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-2 mb-3">
+                                <label class="mb-2 form-label">Height in CM <span class="text-danger ms-1">*</span></label>
+                                {{ html()->number('height', old('height'))->class("form-control ms-0")->placeholder("0") }}
+                                @error('height')
+                                <small class="text-danger">{{ $errors->first('height') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-2 mb-3">
+                                <label for="religion" class="form-label mb-2">Religion <span class="text-danger ms-1">*</span></label>
+                                {{ html()->select('religion', $casts->where('type', 'religion')->pluck('name', 'id'), old('religion'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                @error('religion')
+                                <small class="text-danger">{{ $errors->first('religion') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-2 mb-3">
+                                <label for="caste" class="form-label mb-2">Caste <span class="text-danger ms-1">*</span></label>
+                                {{ html()->select('caste', $casts->where('type', 'caste')->pluck('name', 'id'), old('caste'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                @error('caste')
+                                <small class="text-danger">{{ $errors->first('caste') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-2 mb-3">
+                                <label for="subcaste" class="form-label mb-2">Subcaste</label>
+                                {{ html()->select('subcaste', $casts->where('type', 'subcaste')->pluck('name', 'id'), old('subcaste'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                @error('subcaste')
+                                <small class="text-danger">{{ $errors->first('subcaste') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <label for="Qualification" class="form-label mb-2">Qualification <span class="text-danger ms-1">*</span></label>
+                                {{ html()->select('qualification', $extras->where('name', 'qualification')->pluck('value', 'id'), old('qualification'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                @error('qualification')
+                                <small class="text-danger">{{ $errors->first('qualification') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-4 mb-3">
+                                <label for="Occupation" class="form-label mb-2">Occupation <span class="text-danger ms-1">*</span></label>
+                                {{ html()->select('occupation', $extras->where('name', 'occupation')->pluck('value', 'id'), old('occupation'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                @error('occupation')
+                                <small class="text-danger">{{ $errors->first('occupation') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Annual Income <span class="text-danger ms-1">*</span></label>
+                                {{ html()->number('income', old('income'))->class("form-control ms-0")->placeholder("0.00") }}
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Contact Number 1 <span class="text-danger ms-1">*</span></label>
+                                {{ html()->text('contact_number_1', old('contact_number_1'))->class("form-control ms-0")->maxlength(10)->placeholder("xxxxxxxxxx") }}
+                                @error('contact_number_1')
+                                <small class="text-danger">{{ $errors->first('contact_number_1') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Contact Number 2</label>
+                                {{ html()->text('contact_number_2', old('contact_number_2'))->class("form-control ms-0")->maxlength(10)->placeholder("xxxxxxxxxx") }}
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="mb-2 form-label">Address <span class="text-danger ms-1">*</span></label>
+                                {{ html()->text('address', old('address'))->class("form-control ms-0")->placeholder("Address") }}
+                                @error('address')
+                                <small class="text-danger">{{ $errors->first('address') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Pincode <span class="text-danger ms-1">*</span></label>
+                                {{ html()->text('pincode', old('pincode'))->class("form-control ms-0")->maxlength(6)->placeholder("xxxxxx") }}
+                                @error('pincode')
+                                <small class="text-danger">{{ $errors->first('pincode') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="mb-2 form-label">State <span class="text-danger ms-1">*</span></label>
+                                {{ html()->select('state', $states->pluck('name', 'id'), old('state'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                @error('state')
+                                <small class="text-danger">{{ $errors->first('state') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="mb-2 form-label">District <span class="text-danger ms-1">*</span></label>
+                                {{ html()->select('district', $districts->pluck('name', 'id'), old('district'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                @error('district')
+                                <small class="text-danger">{{ $errors->first('district') }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="mb-2 form-label">Biodata </label><span class="text-primary small">(Allowed file types are .docx and .pdf)</span>
+                                {{ html()->file('biodata')->class("form-control ms-0") }}
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="mb-2 form-label">Horoscope</label> <span class="text-primary small">(Allowed file types are .docx, .pdf, .jpeg, .jpg, .png, .webp)</span>
+                                {{ html()->file('horoscope')->class("form-control ms-0") }}
+                            </div>
+                            <div class="col-sm-12 mb-3">
+                                <label class="mb-2 form-label">Images </label><span class="text-primary small">(Multiple selection enabled. Recommended size is 950px width & 488px height with .webp type and up to 5 images less than 200kb each)</span>
+                                {{ html()->file('images[]')->class("form-control ms-0 multi_img")->multiple()->required() }}
+                            </div>
+                            <div class="col-sm-12" id="multi_img">
 
+                            </div>
+                            <div class="col-xl-12 mt-5">
+                                <div class="d-grid mb-3">
+                                    {{ html()->submit('Post')->class('btn btn-submit btn-primary') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ html()->form()->close() }}
+    </div>
+</section>
 @endsection('content')

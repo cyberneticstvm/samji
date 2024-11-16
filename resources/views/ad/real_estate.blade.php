@@ -117,14 +117,14 @@
                                 @enderror
                             </div>
                             <div class="col-sm-6 mb-3">
-                                <label class="mb-2 form-label">State</label>
+                                <label class="mb-2 form-label">State <span class="text-danger ms-1">*</span></label>
                                 {{ html()->select('state', $states->pluck('name', 'id'), old('state'))->class("form-control ms-0 select2")->placeholder("Select") }}
                                 @error('state')
                                 <small class="text-danger">{{ $errors->first('state') }}</small>
                                 @enderror
                             </div>
                             <div class="col-sm-6 mb-3">
-                                <label class="mb-2 form-label">District</label>
+                                <label class="mb-2 form-label">District <span class="text-danger ms-1">*</span></label>
                                 {{ html()->select('district', $districts->pluck('name', 'id'), old('district'))->class("form-control ms-0 select2")->placeholder("Select") }}
                                 @error('district')
                                 <small class="text-danger">{{ $errors->first('district') }}</small>

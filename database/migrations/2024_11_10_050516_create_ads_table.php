@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
+            $table->string('registration_id')->nullable()->unique();
             $table->unsignedBigInteger('category_id');
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
@@ -35,8 +36,21 @@ return new class extends Migration
             $table->decimal('price', 10, 2)->nullable();
             $table->string('location')->nullable();
             $table->string('address')->nullable();
+            $table->string('pincode', 7)->nullable();
             $table->unsignedBigInteger('state')->nullable();
             $table->unsignedBigInteger('district')->nullable();
+            $table->integer('height')->nullable();
+            $table->date('dob')->nullable();
+            $table->unsignedBigInteger('religion')->nullable();
+            $table->unsignedBigInteger('caste')->nullable();
+            $table->unsignedBigInteger('subcaste')->nullable();
+            $table->unsignedBigInteger('qualification')->nullable();
+            $table->unsignedBigInteger('occupation')->nullable();
+            $table->decimal('income', 10, 2)->nullable();
+            $table->string('contact_number_1', 10)->nullable();
+            $table->string('contact_number_2', 10)->nullable();
+            $table->string('biodata')->nullable();
+            $table->string('horoscope')->nullable();
             $table->enum('status', ['pending', 'approved', 'rejected']);
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
