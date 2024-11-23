@@ -9,6 +9,11 @@ use Illuminate\Routing\Route;
 
 class CategoryController extends Controller
 {
+    function getListing($id)
+    {
+        return Ad::where('category_id', $id)->where('status', 'approved')->orderByDesc('id')->paginate(10);
+    }
+
     function publicInfo(Request $request)
     {
         $page_title = 'Samji Web Portal';
@@ -20,7 +25,7 @@ class CategoryController extends Controller
     {
         $page_title = 'Samji Web Portal';
         $category = Category::where('route', $request->route()->getName())->first();
-        $items = Ad::where('category_id', $category->id)->where('status', 'pending')->orderByDesc('id')->paginate(10);
+        $items = $this->getListing($category->id);
         return view('category.real_estate', compact('page_title', 'category', 'items'));
     }
 
@@ -34,7 +39,14 @@ class CategoryController extends Controller
     {
         $page_title = 'Samji Web Portal';
         $category = Category::where('route', $request->route()->getName())->first();
-        return view('category.matrimonial', compact('page_title', 'category'));
+        $items = $this->getListing($category->id);
+        return view('category.matrimonial', compact('page_title', 'category', 'items'));
+    }
+
+    function matrimonialDetail(string $category, string $id, string $slug)
+    {
+        $ad = Ad::findOrFail($id);
+        return view('category.matrimonial_detail', compact('ad'));
     }
 
     function vehicle(Request $request)

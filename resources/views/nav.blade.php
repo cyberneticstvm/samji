@@ -40,6 +40,15 @@
                                         <!-- End::slide --> <!-- Start::slide -->
                                         <li class="slide"> <a href="{{ route('contact') }}" class="side-menu__item"> <span class="side-menu__label">Contact Us</span> </a> </li>
                                         <!-- End::slide -->
+                                        @auth
+                                        <li class="slide has-sub"> <a href="javascript:void(0);" class="side-menu__item"> <span class="side-menu__label">My Profile </span> <i class="fe fe-chevron-down side-menu__angle"></i> </a>
+                                            <ul class="slide-menu child1 without-icon active" data-popper-placement="bottom" style="position: relative; left: 0px; top: 0px; margin: 0px; box-sizing: border-box; transform: translate(900px, 56px); display: none;">
+                                                <li class="slide"> <a href="{{ route('dashboard') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Dashboard</span> </a> </li>
+                                                <li class="slide"> <a href="{{ route('listing') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Listings</span> </a> </li>
+                                                <li class="slide"> <a href="{{ route('profile') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Profile</span> </a> </li>
+                                            </ul>
+                                        </li>
+                                        @endauth
                                     </ul>
                                 </nav>
                                 <!-- End::nav -->

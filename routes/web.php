@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WebController;
+use App\Http\Middleware\UserRole;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['web'])->group(function () {
@@ -34,16 +37,38 @@ Route::middleware(['web'])->group(function () {
     });
     Route::prefix('ads')->controller(CategoryController::class)->group(function () {
         Route::get('/{category}/{id}/{slug}', 'realEstateDetail')->name('category.real.estate.detail');
+        Route::get('/{category}/{id}/{slug}', 'matrimonialDetail')->name('category.matrimonial.detail');
     });
 });
+
 Route::middleware(['web', 'auth'])->group(function () {
-    Route::prefix('')->controller(WebController::class)->group(function () {
-        Route::get('/logout', 'logout')->name('logout');
+    Route::middleware('user-roles:' . serialize(array('user', 'admin', 'agent', 'executive')))->group(function () {
+        Route::controller(WebController::class)->group(function () {
+            Route::get('/logout', 'logout')->name('logout');
+        });
+        Route::prefix('post/ad')->controller(AdController::class)->group(function () {
+            Route::get('/realestate', 'viewFormRealEstate')->name('post.ad.real.estate');
+            Route::post('/realestate', 'saveAdRealEstate')->name('post.ad.real.estate.save');
+            Route::get('/matrimonial', 'viewFormMatrimonial')->name('post.ad.matrimonial');
+            Route::post('/matrimonial', 'saveAdMatrimonial')->name('post.ad.matrimonial.save');
+
+            Route::get('/edit/{id}', 'editAd')->name('ad.edit');
+
+            Route::post('/realestate/update/{id}', 'updateAdRealEstate')->name('post.ad.real.estate.update');
+            Route::post('/matrimonial/update/{id}', 'updateMatrimonial')->name('post.ad.matrimonial.update');
+        });
+        Route::prefix(Auth::user()->role ?? 'user')->controller(AdminController::class)->group(function () {
+            Route::get('/dashboard', 'dashboard')->name('dashboard');
+            Route::get('/listing', 'listing')->name('listing');
+            Route::get('/profile', 'profile')->name('profile');
+        });
     });
-    Route::prefix('post/ad')->controller(AdController::class)->group(function () {
-        Route::get('/realestate', 'viewFormRealEstate')->name('post.ad.real.estate');
-        Route::post('/realestate', 'saveAdRealEstate')->name('post.ad.real.estate.save');
-        Route::get('/matrimonial', 'viewFormMatrimonial')->name('post.ad.matrimonial');
-        Route::post('/matrimonial', 'saveAdMatrimonial')->name('post.ad.matrimonial.save');
+
+    Route::prefix('admin')->middleware('user-roles:' . serialize(array('user')))->group(function () {
+        Route::controller(AdminController::class)->group(function () {
+            Route::get('/ad/delete/{id}', 'deleteAd')->name('ad.delete');
+            Route::get('/ad/status/{id}', 'adStatus')->name('ad.status');
+            Route::post('/ad/status/{id}', 'adStatusUpdate')->name('ad.status.update');
+        });
     });
 });

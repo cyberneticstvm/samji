@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name', 50)->unique();
             $table->string('icon', 50)->nullable();
             $table->string('route')->nullable();
+            $table->string('ad_edit_view')->nullable();
             $table->string('ad_post_route')->nullable();
             $table->timestamps();
             $table->softDeletes();

@@ -11,6 +11,8 @@ class Ad extends Model
 
     protected $guarded = [];
 
+    protected $casts = ['dob' => 'datetime'];
+
     public function images()
     {
         return $this->hasMany(AdImage::class, 'ad_id', 'id');
@@ -29,5 +31,15 @@ class Ad extends Model
     public function categoryDetail()
     {
         return $this->belongsTo(Extra::class, 'category', 'id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'created_by', 'id');
+    }
+
+    public function cancelled()
+    {
+        return ($this->deleted_at) ? "<span class='badge bg-danger-transparent text-danger'>Deleted</span>" : "<span class='badge bg-success-transparent text-success'>Active</span>";
     }
 }

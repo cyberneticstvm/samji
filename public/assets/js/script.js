@@ -5,6 +5,7 @@ $(function () {
         placeholder: "Select",
         /*allowClear: true*/
     });
+    $('#dataTable').DataTable();
 
     $(document).on("change", ".multi_img", function(e){
         if (window.File && window.FileReader && window.FileList && window.Blob){
