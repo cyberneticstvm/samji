@@ -44,13 +44,44 @@ class AdController extends Controller
             if ($request->file('images')):
                 $images = $request->file('images');
                 foreach ($images as $key => $item):
-                    $this->saveImages($ad, $item);
+                    $path = 'ad-files/' . $ad->category_id . '/' . $ad->id;
+                    $this->saveFiles($ad, $item, $path, $type = 'img', null);
                 endforeach;
             endif;
         } catch (Exception $e) {
             return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
         }
         return redirect()->route('index')->with("success", "Ad submitted successfully");
+    }
+
+    function updateAdRealEstate(Request $request, string $id)
+    {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'type' => 'required',
+            'price' => 'required',
+            'state' => 'required',
+            'district' => 'required',
+        ]);
+        try {
+            $input = $request->except(array('images'));
+            $input['slug'] = strtolower(str_replace(' ', '-', $request->title));
+            $input['updated_by'] = $request->user()->id;
+            $input['status'] = 'pending';
+            $ad = Ad::findOrFail($id);
+            $ad->update($input);
+            if ($request->file('images')):
+                $images = $request->file('images');
+                $path = 'ad-files/' . $ad->category_id . '/' . $ad->id;
+                foreach ($images as $key => $item):
+                    $this->saveFiles($ad, $item, $path, $type = 'img', null);
+                endforeach;
+            endif;
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
+        }
+        return redirect()->route('index')->with("success", "Ad updated successfully");
     }
 
     function viewFormMatrimonial(Request $request)

@@ -118,7 +118,7 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <div class="item-tabcard-img">
-                                                    <div class="item-tabcard-imgs"> <a aria-label="anchor" href="{{ route('category.real.estate.detail', ['category' => strtolower($category->name),'id' => $item->id, 'slug' => $item->slug]) }}"></a> <img src="{{ $item->images?->first()?->image_url ? url($item->images?->first()?->image_url) : '' }}" alt="img" class="cover-image rounded-1 w-100"> </div>
+                                                    <div class="item-tabcard-imgs"> <a aria-label="anchor" href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}"></a> <img src="{{ $item->images?->first()?->image_url ? url($item->images?->first()?->image_url) : '' }}" alt="img" class="cover-image rounded-1 w-100"> </div>
                                                     <div class="item-tabcard-icons"> <a aria-label="anchor" href="javascript:void(0);" class="item-tabcard-icons1 wishlist" data-bs-toggle="tooltip" data-bs-title="Add to Wishlist" data-bs-placement="top"> <i class="fe fe-heart"></i> </a> </div>
                                                     <div class="item-tabcard-icons2"> <a aria-label="anchor" href="javascript:void(0);" class="item-tabcard-icons1"> New</a> </div>
                                                 </div>
@@ -126,7 +126,7 @@
                                             <div class="col-md-9 my-auto">
                                                 <div class="item-tabcard">
                                                     <div class="d-flex justify-content-between mb-3">
-                                                        <a href="{{ route('category.real.estate.detail', ['category' => strtolower($category->name),'id' => $item->id, 'slug' => $item->slug]) }}" class="text-dark my-auto">
+                                                        <a href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}" class="text-dark my-auto">
                                                             <h4 class="fw-medium mb-0">{{ $item->title }}</h4>
                                                         </a>
                                                         <div class="d-flex flex-wrap gap-1">
@@ -157,7 +157,7 @@
                                                     </div>
                                                     <div class="d-flex gap-2 mt-2 align-items-end flex-wrap">
                                                         <h5 class="mb-0 text-pink"> ₹{{ number_format($item->price, 2), ',' }}</h5>
-                                                        <div class="ms-auto d-flex gap-2 flex-wrap"> <a href="{{ route('category.real.estate.detail', ['category' => strtolower($category->name),'id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-sm btn-primary"><i class="fe fe-eye me-2"></i> View Details</a> <a href="{{ route('contact') }}" class="btn btn-sm btn-secondary"><i class="fe fe-phone me-2"></i> Contact Us</a> </div>
+                                                        <div class="ms-auto d-flex gap-2 flex-wrap"> <a href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-sm btn-primary"><i class="fe fe-eye me-2"></i> View Details</a> <a href="{{ route('contact') }}" class="btn btn-sm btn-secondary"><i class="fe fe-phone me-2"></i> Contact Us</a> </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -173,8 +173,8 @@
                                     <div class="col-xl-4 col-lg-6">
                                         <div class="card">
                                             <div class="card-body position-relative p-3">
-                                                <div class="position-relative mb-3 overflow-hidden"> <a aria-label="anchor" href="{{ route('category.real.estate.detail', ['category' => strtolower($category->name),'id' => $item->id, 'slug' => $item->slug]) }}"></a> <img src="{{ $item->images?->first()?->image_url ? url($item->images->first()->image_url) : '' }}" alt="img" class="cover-image w-100 h-100 rounded-1"> <span class="badge bg-secondary blog-badge text-primary">New</span> <span class="badge bg-pink blog-badge2">₹{{ number_format($item->price, 2), ',' }}</span> <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-title="Add to Wishlist" data-bs-placement="top" class="badge bg-black-2 blog-badge3"><i class="fa-regular fa-heart"></i></a> </div>
-                                                <a href="{{ route('category.real.estate.detail', ['category' => strtolower($category->name),'id' => $item->id, 'slug' => $item->slug]) }}" class="text-dark">
+                                                <div class="position-relative mb-3 overflow-hidden"> <a aria-label="anchor" href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}"></a> <img src="{{ $item->images?->first()?->image_url ? url($item->images->first()->image_url) : '' }}" alt="img" class="cover-image w-100 h-100 rounded-1"> <span class="badge bg-secondary blog-badge text-primary">New</span> <span class="badge bg-pink blog-badge2">₹{{ number_format($item->price, 2), ',' }}</span> <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-title="Add to Wishlist" data-bs-placement="top" class="badge bg-black-2 blog-badge3"><i class="fa-regular fa-heart"></i></a> </div>
+                                                <a href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}" class="text-dark">
                                                     <h5 class="text-dark mb-1">{{ $item->title }}</h5>
                                                 </a>
                                                 <div class="d-flex flex-wrap align-items-center flex-wrap">
@@ -201,7 +201,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="card-footer px-3"> <a href="{{ route('category.real.estate.detail', ['category' => strtolower($category->name),'id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-primary w-100 btn-sm">View Details</a> </div>
+                                            <div class="card-footer px-3"> <a href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}" class="btn btn-primary w-100 btn-sm">View Details</a> </div>
                                         </div>
                                     </div>
                                     @empty

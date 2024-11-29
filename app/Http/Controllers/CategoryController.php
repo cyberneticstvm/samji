@@ -29,7 +29,7 @@ class CategoryController extends Controller
         return view('category.real_estate', compact('page_title', 'category', 'items'));
     }
 
-    function realEstateDetail(string $category, string $id, string $slug)
+    function realEstateDetail(string $id, string $slug)
     {
         $ad = Ad::findOrFail($id);
         return view('category.real_estate_detail', compact('ad'));
@@ -43,7 +43,7 @@ class CategoryController extends Controller
         return view('category.matrimonial', compact('page_title', 'category', 'items'));
     }
 
-    function matrimonialDetail(string $category, string $id, string $slug)
+    function matrimonialDetail(string $id, string $slug)
     {
         $ad = Ad::findOrFail($id);
         return view('category.matrimonial_detail', compact('ad'));

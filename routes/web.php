@@ -36,8 +36,8 @@ Route::middleware(['web'])->group(function () {
         Route::get('/services', 'service')->name('category.service');
     });
     Route::prefix('ads')->controller(CategoryController::class)->group(function () {
-        Route::get('/{category}/{id}/{slug}', 'realEstateDetail')->name('category.real.estate.detail');
-        Route::get('/{category}/{id}/{slug}', 'matrimonialDetail')->name('category.matrimonial.detail');
+        Route::get('real-estate/{id}/{slug}', 'realEstateDetail')->name('category.real.estate.detail');
+        Route::get('matrimonial/{id}/{slug}', 'matrimonialDetail')->name('category.matrimonial.detail');
     });
 });
 
@@ -64,7 +64,7 @@ Route::middleware(['web', 'auth'])->group(function () {
         });
     });
 
-    Route::prefix('admin')->middleware('user-roles:' . serialize(array('user')))->group(function () {
+    Route::prefix('admin')->middleware('user-roles:' . serialize(array('admin')))->group(function () {
         Route::controller(AdminController::class)->group(function () {
             Route::get('/ad/delete/{id}', 'deleteAd')->name('ad.delete');
             Route::get('/ad/status/{id}', 'adStatus')->name('ad.status');
