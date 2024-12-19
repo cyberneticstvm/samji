@@ -3824,7 +3824,7 @@ a.tag:hover {
 /* End:: Customs */
 /* Start:: Header */
 .main-header {
-  background-color: transparent;
+  background-color: var(--primary-color);
 }
 .main-header .nav-link {
   transition: all ease 0.2s;
@@ -3864,7 +3864,7 @@ a.tag:hover {
 @media (min-width: 992px) {
   .sticky.sticky-pin .app-sidebar .side-menu__label,
   .sticky.sticky-pin .app-sidebar .side-menu__angle {
-    color: rgb(var(--menu-color));
+    color: #fff;
     opacity: 1;
   }
 }
@@ -6139,7 +6139,7 @@ body.admin-dashboard {
     margin: 0 auto;
   }
   [data-nav-layout=horizontal] .head_menu_container {
-    background-color: var(--custom-white);
+    background-color: var(--primary-color);
     position: fixed;
     width: 100%;
     z-index: 9;
@@ -6447,7 +6447,7 @@ body.admin-dashboard {
   align-items: center;
   text-decoration: none;
   font-size: 0.84rem;
-  color: var(--default-text-color);
+  color: #fff;
   font-weight: 400;
 }
 .app-sidebar .side-menu__item.active, .app-sidebar .side-menu__item:hover {
@@ -6620,7 +6620,7 @@ body.admin-dashboard {
     padding-block: 0.75rem;
     margin: 0;
     width: 100%;
-    background: var(--custom-white);
+    background: var(--primary-color);
   }
   .main-header.sticky-header {
     box-shadow: 0 0.125rem 1rem 3px var(--black-1);

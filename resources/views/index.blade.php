@@ -61,6 +61,11 @@
 </section>
 <!--Banner Section--> <!--Categories-->
 <section class="section bg-white position-relative">
+    <div class="container mb-5">
+        <div class="holder">
+            <p class="news text-primary">REGISTRATION FREE !!! WWW.SAMJIAPP.COM, MORE THAN HUNDRED SERVICE PROVIDERS AVAILABILE AT ONE LOGIN. DOWNLOAD SAMJIAPP FROM link</p>
+        </div>
+    </div>
     <div class="text-center"> <span class="section-bg-title">Areas</span> </div>
     <div class="container">
         <div class="section-title center-block text-center mb-6">

@@ -14,12 +14,14 @@
     </svg> <!--Shape End-->
 </section>
 <section class="section position-relative bg-white">
-    <div class="text-center"> <span class="section-bg-title">Coming</span> </div>
+    <div class="text-center"> <span class="section-bg-title">About</span> </div>
     <div class="container">
         <div class="section-title center-block text-center mb-4">
-            <h2>Coming Soon</h2>
-            <p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+            <h2>SAMJIAPP IS INDIA'S FIRST NATIONAL CLASSIFIED COMBINED PORTAL</h2>
         </div>
+        <p><a href="{{ route('index') }}" class="text-primary">www.samjiapp.com</a> is India's first National classified combined portal. It provides more than 100 services at one login and thus it meets all services which required to meet even essential and formal service too. The service of Real estate,matrimony, education, professional,tours & travel,vehicle,hotel & restaurant,shopping, job vacancies,construction, hospital & health and other services. Further it provides all information of any shops and private institutions also.</p>
+        <p>You can get A to Z information of any kind of services of all the States of India, by downloading Samjiapp in your mobile as and when the situation arise. Samjiapp can be downloaded through the website www.samjiapp.com & also from Google Play Store.</p>
+        <p>"One registration One login" is our concept and hence registration is free of cost. For posting advertisement we are having norms. This app makes you great satisfaction and give you up to date information and hassle free action. We expect your kind cooperation</p>
     </div>
 </section>
 @endsection('content')

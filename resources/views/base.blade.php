@@ -31,6 +31,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap.min.css" rel="stylesheet" />
     <!-- Swiper CSS-->
     <link rel="stylesheet" href="{{ asset('/assets/libs/swiper/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/samji.css') }}">
     <!-- Main Theme Js -->
     <meta http-equiv="imagetoolbar" content="no">
 
@@ -50,7 +51,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-12">
                             <a href="{{ route('index') }}"> <img src="{{ asset('/assets/images/brand/logo.png') }}" alt="logo" class="mb-3 footer-logo-img"> </a>
-                            <p class="mb-3 text-white-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit aliquid provident iusto ab deleniti nam reprehenderit aliquam soluta possimus distinctio doloribus eius</p>
+                            <p class="mb-3 text-white-50">SamjiApp, India’s first national level combined portal, which facilitate buyers & sellers. SamjiApp consists of various services irrerespective of states & local level . By downloading samjiapp more than hundred service providers available at one login.</p>
                             <ul class="social mb-lg-0">
                                 <li><a aria-label="anchor" class="social-icon" href="javascript:void(0);"><i class="fa-brands fa-facebook"></i></a></li>
                                 <li><a aria-label="anchor" class="social-icon" href="javascript:void(0);"><i class="fa-brands fa-x-twitter"></i></a></li>
@@ -64,19 +65,19 @@
                                 <div class="col-lg-6 col-md-12">
                                     <h6>Business</h6>
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i> Company</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Colleges</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Hospital</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Factories</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i> Shopping</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Healthcare</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Jobs</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Public Info</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <h6>Classifieds</h6>
                                     <ul class="list-unstyled mb-0">
                                         <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Real Estate</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Computer</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Clothing</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Jobs</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Matrimonial</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Tours & Travels</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fe fe-chevrons-right me-1"></i>Education</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -84,10 +85,10 @@
                         <div class="col-lg-3 col-md-12">
                             <h6 class="">Get In Touch</h6>
                             <ul class="list-unstyled mb-lg-0 address-icons">
-                                <li> <a href="javascript:void(0)"><i class="fa fa-map-location-dot me-2"></i> New York, NY 10012,US-52014</a> </li>
-                                <li> <a href="javascript:void(0)"><i class="fa-solid fa-envelope-open-text me-2"></i> info12323@example.com</a> </li>
-                                <li> <a href="javascript:void(0)"><i class="fa fa-headset me-2"></i> + 01 234 567 88, + 01 234 567 88</a> </li>
-                                <li> <a href="javascript:void(0)"><i class="fa fa-print me-2"></i> + 01 234 567 89, + 01 234 567 89</a> </li>
+                                <li> <a href="javascript:void(0)"><i class="fa fa-map-location-dot me-2"></i> SamjiApp, Kowdiar, Thiruvananthapuram</a> </li>
+                                <li> <a href="mailto:info@samjiapp.com"><i class="fa-solid fa-envelope-open-text me-2"></i> info@samjiapp.com</a> </li>
+                                <li> <a href="tel:+917510621111"><i class="fa fa-headset me-2"></i> +91 7510621111</a> </li>
+                                <li> <a href="+917510621111"><i class="fa fa-print me-2"></i> + +91 7510621111</a> </li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-12">
@@ -100,7 +101,7 @@
             </div>
             <div class="text-white p-0 ">
                 <div class="d-flex container p-0 flex-wrap">
-                    <div class="text-start footer-links d-flex flex-wrap justify-content-center"> <a href="javascript:void(0)" class="btn btn-link my-auto">About Us</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Pricing</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Privacy Policy</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Blog</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Contact Us</a> </div>
+                    <div class="text-start footer-links d-flex flex-wrap justify-content-center"> <a href="javascript:void(0)" class="btn btn-link my-auto">Real Estate</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Matrimonial</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Tours & Travels</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Education</a> </div>
                     <div class="ms-auto">
                         <ul class="payments mb-0 d-flex list-unstyled flex-wrap">
                             <li><a aria-label="anchor" class="payment-icon" href="javascript:void(0);"><i class="fa-brands fa-cc-amex"></i></a></li>
@@ -117,7 +118,7 @@
             <div class="text-fixed-white p-0 border-top">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-sm-12 my-3 text-center"> Copyright © <span id="year"></span> <a href="javascript:void(0)" class="text-secondary fw-semibold fs-16"> Roxlist</a> . Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0);" class="text-secondary fw-semibold fs-16"> Spruko </a> All rights reserved. </div>
+                        <div class="col-sm-12 my-3 text-center"> Copyright © <span id="year"></span> <a href="javascript:void(0)" class="text-secondary fw-semibold fs-16"> SamjiApp</a> . Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0);" class="text-secondary fw-semibold fs-16"> Liexa </a> All rights reserved. </div>
                     </div>
                 </div>
             </div>

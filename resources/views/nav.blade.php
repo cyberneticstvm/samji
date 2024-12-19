@@ -10,7 +10,7 @@
                         <div class="header-element me-1">
                             <!-- Start::header-link --> <a aria-label="anchor" href="javascript:void(0);" class="sidemenu-toggle header-link" data-bs-toggle="sidebar"> <span class="open-toggle"> <i class="bi bi-text-indent-left header-link-icon"></i> </span> </a> <!-- End::header-link -->
                         </div>
-                        <!-- End::header-element --> <a href="{{ route('index') }}" class="brand-main"> <img src="{{ asset('/assets/images/brand/logo.png') }}" alt="img" class="desktop-logo logo-dark"> <img src="{{ asset('/assets/images/brand/favicon-light.png') }}" alt="img" class="mobile-logo mobile-dark mx-3"> <img src="{{ asset('/assets/images/brand/logo1.png') }}" alt="img" class="desktop-logo logo-color"> <img src="{{ asset('/assets/images/brand/favicon.png') }}" alt="img" class="mobile-logo mobile-color"> </a> <!-- Start::app-sidebar -->
+                        <!-- End::header-element --> <a href="{{ route('index') }}" class="brand-main"> <img src="{{ asset('/assets/images/brand/logo.png') }}" alt="img" class="desktop-logo logo-dark"> <img src="{{ asset('/assets/images/brand/logo.png') }}" alt="img" class="mobile-logo mobile-dark mx-3"> <img src="{{ asset('/assets/images/brand/logo.png') }}" alt="img" class="desktop-logo logo-color"> <img src="{{ asset('/assets/images/brand/logo.png') }}" alt="img" class="mobile-logo mobile-color"> </a> <!-- Start::app-sidebar -->
                         <aside class="app-sidebar" id="sidebar">
                             <!-- Start::main-sidebar -->
                             <div class="main-sidebar" id="sidebar-scroll">
