@@ -2,52 +2,54 @@
 @section('content')
 
 <!--Banner Section-->
-<section class="section banner-1 cover-image pt-sm-10p pb-sm-9 py-5" data-bs-image-src="{{ asset('/assets/images/banners/21.png') }}" style="background: url(&quot;{{ asset('/assets/images/banners/21.png') }}&quot;) center center;">
+<section class="section banner-1 cover-image pt-sm-10p pb-sm-9 py-5"
+    data-bs-image-src="{{ asset('/assets/images/banners/21.png') }}">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-md-12 my-auto">
                 <div class="text-fixed-white">
-                    <p class="mb-3 fs-13 text-uppercase text-secondary fw-semibold section-bg-title text-start ms-3"> Business Towards Success </p>
+                    <p class="mb-3 fs-13 text-uppercase text-secondary fw-semibold section-bg-title text-start ms-3">
+                        Business Towards Success
+                    </p>
                     <h1 class="mb-3 fw-semibold text-fixed-white">Unveiling the World's Largest <span class="text-secondary">Business Directory</span> for Global Entrepreneurs</h1>
-                    <p class="mb-5 sub-text text-fixed-white">Are you looking for a comprehensive classifieds business directory that offers listings for jobs, real estate, education, and more </p>
+                    <p class="mb-5 sub-text text-fixed-white">Are you looking for a comprehensive classifieds business directory that offers listings for real estate, matrimonials, jobs, education, and more </p>
                 </div>
                 <div class="form d-md-flex  bg-white w-100 rounded-1 shadow-primary-sm banner-input-group text-start">
-                    <input type="text" class="form-control form-control-lg rounded-0" id="sale-text" placeholder="looking For" autocomplete="off">
-                    <div class="choices" data-type="select-one" tabindex="0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false">
-                        <div class="choices__inner">
-                            <select class="form-control choices__input" data-trigger="" name="choices-single-default" id="choices-single-default" hidden="" tabindex="-1" data-choice="active">
-                                <option value="" data-custom-properties="[object Object]">Category</option>
-                            </select>
-                            <div class="choices__list choices__list--single">
-                                <div class="choices__item choices__placeholder choices__item--selectable" data-item="" data-id="1" data-value="" data-custom-properties="[object Object]" aria-selected="true">Category</div>
-                            </div>
-                        </div>
-                        <div class="choices__list choices__list--dropdown" aria-expanded="false">
-                            <input type="search" name="search_terms" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="Category" placeholder="Search Here">
-                            <div class="choices__list" role="listbox">
-                                <div id="choices--choices-single-default-item-choice-3" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" role="option" data-choice="" data-id="3" data-value="" data-select-text="Press to select" data-choice-selectable="" aria-selected="true">Category</div>
-                                <div id="choices--choices-single-default-item-choice-1" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="1" data-value="0" data-select-text="Press to select" data-choice-selectable="">All</div>
-                                <div id="choices--choices-single-default-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="8" data-select-text="Press to select" data-choice-selectable="">Cafe</div>
-                                <div id="choices--choices-single-default-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="4" data-select-text="Press to select" data-choice-selectable="">Cinema</div>
-                                <div id="choices--choices-single-default-item-choice-5" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="5" data-value="10" data-select-text="Press to select" data-choice-selectable="">College</div>
-                                <div id="choices--choices-single-default-item-choice-6" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="6" data-value="3" data-select-text="Press to select" data-choice-selectable="">Events</div>
-                                <div id="choices--choices-single-default-item-choice-7" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="7" data-value="5" data-select-text="Press to select" data-choice-selectable="">Gym</div>
-                                <div id="choices--choices-single-default-item-choice-8" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="8" data-value="1" data-select-text="Press to select" data-choice-selectable="">Hotels</div>
-                                <div id="choices--choices-single-default-item-choice-9" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="9" data-value="9" data-select-text="Press to select" data-choice-selectable="">Mobile Store</div>
-                                <div id="choices--choices-single-default-item-choice-10" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="10" data-value="2" data-select-text="Press to select" data-choice-selectable="">Restaurant</div>
-                                <div id="choices--choices-single-default-item-choice-11" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="11" data-value="6" data-select-text="Press to select" data-choice-selectable="">Shop &amp; Store</div>
-                                <div id="choices--choices-single-default-item-choice-12" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="12" data-value="7" data-select-text="Press to select" data-choice-selectable="">Tours &amp; Travels</div>
-                            </div>
-                        </div>
+                    <input type="text" class="form-control form-control-lg rounded-0" id="sale-text"
+                        placeholder="looking For" autocomplete="off">
+                    <select class="form-control" data-trigger name="choices-single-default"
+                        id="choices-single-default">
+                        <option value="">Category</option>
+                        @forelse(categories() as $key => $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @empty
+                        @endforelse
+                    </select>
+                    <div class="form-group mb-sm-0 location w-100">
+                        <input type="text" class="form-control form-control-lg rounded-0" id="sale-location"
+                            placeholder="Location">
+                        <span>
+                            <button aria-label="button" type="button" class="btn btn-primary location-gps"
+                                data-bs-toggle="modal" data-bs-target="#locationModal">
+                                <i class="fe fe-map-pin"></i>
+                            </button>
+                        </span>
                     </div>
-                    <div class="mb-sm-0"> <a href="javascript:void(0)" class="btn btn-block btn-secondary h-100 w-100 btn-lg search-btn"> <i class="fa fa-search  me-2"></i> Search Now </a> </div>
+                    <div class="mb-sm-0">
+                        <a href="javascript:void(0)" class="btn btn-block btn-secondary h-100 w-100 btn-lg search-btn">
+                            <i class="fa fa-search  me-2"></i> Search Now
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5 col-md-12 text-lg-end my-auto text-center my-auto">
-                <div class="main-banner-1  my-auto "> <img src="{{ asset('/assets/images/banners/5.png') }}" class="main-banner-png" alt="img"> </div>
+                <div class="main-banner-1  my-auto ">
+                    <img src="{{ asset('/assets/images/banners/1.png') }}" class="main-banner-png" alt="img">
+                </div>
             </div>
         </div>
     </div>
+
     <!-- Shape Start -->
     <svg style="display:none;">
         <symbol id="svg-shape" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -59,7 +61,8 @@
     </svg>
     <!--Shape End-->
 </section>
-<!--Banner Section--> <!--Categories-->
+<!--Banner Section-->
+<!--Categories-->
 <section class="section bg-white position-relative">
     <div class="container mb-5">
         <div class="holder">
@@ -96,7 +99,7 @@
     </div>
 </section>
 <!--/Categories-->
-<!--Locations--> <!--Search Experience-->
+<!--Search Experience-->
 <section class="section bg-white position-relative">
     <div class="text-center"> <span class="section-bg-title">Experience</span> </div>
     <div class="container">
@@ -169,5 +172,5 @@
     </div>
 </section>
 <!--Search Experience-->
-<!--/Featured Ads-->
+
 @endsection('content')

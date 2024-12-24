@@ -7,7 +7,7 @@
         </div>
     </div>
 </section>
-<section class="section">
+<section class="section position-relative bg-white">
     <div class="container">
         <div class="heading-section">
             <div class="text-center mb-2"> <span class="section-bg-title">Login</span> </div>
@@ -49,7 +49,7 @@
                                     <div class="ms-auto"> <a href="#" class="text-primary ms-1">Forgot Password?</a> </div>
                                 </div>
                                 <div class="d-grid mb-3">
-                                    {{ html()->submit('Let Me In')->class('btn btn-submit btn-primary') }}
+                                    {{ html()->submit('Login')->class('btn btn-submit btn-primary') }}
                                 </div>
                                 <div class="text-center">
                                     <p class="mb-0">Don't have an account yet? <a href="{{ route('registration') }}" class="text-primary ms-1">Create an Account</a></p>

@@ -1,0 +1,93 @@
+/* Start:: Forms */
+.form-control,
+.form-select {
+  border: 1px solid $input-border;
+  color: $default-text-color;
+  font-size: 15px;
+  line-height: 1.6;
+  border-radius: 0.3125rem;
+  background-color: $custom-white;
+
+  &:hover,
+  &:focus:hover,
+  &:focus {
+    color: $default-text-color;
+    box-shadow: 0px 0px 10px #{$primary-01};
+    border-color: $primary-05;
+    background-color: $custom-white;
+  }
+
+  &::placeholder {
+    color: $default-text-color;
+    opacity: 0.6;
+  }
+}
+
+.form-check-input {
+  border: 1px solid #{$input-border2};
+
+  &:checked {
+    background-color: #{$primary};
+    border-color: #{$primary};
+  }
+
+  &:focus {
+    border-color: #{$primary-02};
+    box-shadow: none;
+  }
+}
+
+.custom-form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .form-control {
+    padding-inline-end: 60px;
+    padding-inline-start: 20px;
+    line-height: 2.5;
+
+    &.form-control-lg {
+      min-height: calc(1.5em + 1rem + 21px);
+    }
+  }
+
+  .custom-form-btn {
+    position: absolute;
+    inset-inline-end: 0.4rem;
+  }
+}
+
+.form-label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-block-end: 0.5rem;
+}
+
+.input-group-text {
+  border-color: $input-border;
+  font-size: 0.875rem;
+  background: $custom-white;
+  color: $default-text-color;
+  &:focus-visible {
+    outline: 0 !important;
+  }
+}
+
+.form-control-lg {
+  font-size: 1rem;
+  padding: .75rem .938rem;
+}
+
+.input-group .btn {
+  z-index: 5;
+}
+
+.form-control::-webkit-file-upload-button {
+  color: $default-text-color;
+  background-color: $default-background;
+}
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: $default-background;
+}
+/* End:: Forms */

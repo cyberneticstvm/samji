@@ -1,0 +1,60 @@
+/* Start:: Accordion */
+.accordion-item {
+  color: #{$default-text-color};
+  background-color: $custom-white;
+  border-color: #{$border};
+}
+
+.accordion-button {
+  color: $default-text-color;
+  background-color: $custom-white;
+  font-weight: 500;
+  &:hover {
+    color: $default-text-color;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:not(.collapsed) {
+    color: $default-text-color;
+    background-color: $primary-01;
+    box-shadow: none;
+  }
+}
+
+.accordion-collapse.collapse.show ~ .communicate-icons {
+  display: none;
+}
+.accordions-items-seperate .accordion-item:not(:first-of-type) {
+  margin-block-start: 0.5rem;
+}
+.accordions-items-seperate .accordion-item {
+  border: 1px solid $border;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+#accordioncustomicon1Example p:last-child {
+  margin-bottom: 0;
+}
+
+/* Start:: custom icons */
+.accordion {
+  &.accordion-customicon1 {
+    .accordion-button {
+      &:after {
+        content: "\eb89";
+        font-family: "boxicons" !important;
+        background: none;
+      }
+      &:not(.collapsed)::after {
+        content: "\eb56";
+        font-family: "boxicons" !important;
+        background: none;
+      }
+    }
+  }
+}
+/* End:: custom icons */
+/* End:: Accordion */

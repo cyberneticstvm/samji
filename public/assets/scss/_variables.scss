@@ -1,0 +1,287 @@
+
+:root {
+	--body-bg-rgb : 									38 ,141 ,97;
+	--primary-rgb: 										0, 70, 177;
+	--secondary-rgb :									179, 254, 74;
+	--warning-rgb :										248, 208, 0;
+	--info-rgb :										34, 165, 224;
+	--success-rgb :										24, 177, 62;
+	--danger-rgb :										239, 57, 57;
+    --pink-rgb:                                        	255, 43, 136;
+    --blue-rgb:                                         70, 127, 207;
+	--light-rgb :										248, 249, 250;
+	--dark-rgb :										25, 31, 43;
+	--orange-rgb : 										255, 102, 0;
+	--teal-rgb : 										5, 230, 230;
+	--purple-rgb : 										116, 94, 205;
+	--default-font-family:                              "Roboto", sans-serif;	
+	--default-body-bg-color:							#f8f5ee;		
+	--background-color:							        #f8f5ee;		
+	--primary-color:	 								rgb(var(--primary-rgb));
+	--primary-hover:	 								rgba(var(--primary-rgb), 0.8);
+	--primary-border: 									rgb(var(--primary-rgb));
+	--primary005: 										rgba(var(--primary-rgb), 0.05);
+	--primary006: 										rgba(var(--primary-rgb), 0.06);
+	--primary008: 										rgba(var(--primary-rgb), 0.08);
+	--primary004: 										rgba(var(--primary-rgb), 0.04);
+	--primary01: 										rgba(var(--primary-rgb), 0.1);
+	--primary02: 										rgba(var(--primary-rgb), 0.2);
+	--primary03: 										rgba(var(--primary-rgb), 0.3);
+	--primary04: 										rgba(var(--primary-rgb), 0.4);
+	--primary05: 										rgba(var(--primary-rgb), 0.5);
+	--primary06: 										rgba(var(--primary-rgb), 0.6);
+	--primary07: 										rgba(var(--primary-rgb), 0.7);
+	--primary08: 										rgba(var(--primary-rgb), 0.8);
+	--primary09: 										rgba(var(--primary-rgb), 0.9);
+    --primary-shadow:                                   rgba(var(--primary-rgb), 0.1);
+	--default-text-color:       						#212828;
+    --color-dark:                                       #0c2722;
+	--border:									        #e8e9eb;	
+	--input-border:									    #e8e9eb;
+	--input-border2:									#c8ccd3;
+	--shadow:									        rgba(126, 177, 152, 0.2);
+	--default-background: 								#ebebeb;
+	--custom-white:										#fff;
+	--custom-black:										#000;
+	--muted: 										    #8995a7;
+	--muted2: 										    #e6e7e9;
+    --menu-color:										89, 90, 90;
+	--border-width: 									1px;
+	--border-radius: 									4px;
+	--bs-border-color:                                  rgba(var(--primary-rgb), 0.1);
+
+	/* Gray set */
+	--gray-100: #f9faf9;
+    --gray-200: #f2f6f5;
+    --gray-300: #e6eaeb;
+    --gray-400: #dbe1e0;
+    --gray-500: #949eb7;
+    --gray-600: #7987a1;
+    --gray-700: #4d5875;
+    --gray-800: #383853;
+    --gray-900: #323251;
+
+	/* White set */
+	--white-1:											rgba(255, 255, 255, 0.1);
+	--white-2:											rgba(255, 255, 255, 0.2);
+	--white-3:											rgba(255, 255, 255, 0.3);
+	--white-4:											rgba(255, 255, 255, 0.4);
+	--white-5:											rgba(255, 255, 255, 0.5);
+	--white-6:											rgba(255, 255, 255, 0.6);
+	--white-7:											rgba(255, 255, 255, 0.7);
+	--white-8:											rgba(255, 255, 255, 0.8);
+	--white-9:											rgba(255, 255, 255, 0.9);
+	--white-05:											rgba(255, 255, 255, 0.05);
+	--white-06:											rgba(255, 255, 255, 0.06);
+	--white-07:											rgba(255, 255, 255, 0.07);
+	--white-75:											rgba(255, 255, 255, 0.075);
+	--white-08:											rgba(255, 255, 255, 0.08);
+	
+	/* Black set */
+	--black-1:											rgba(0, 0, 0, 0.1);
+	--black-2:											rgba(0, 0, 0, 0.2);
+	--black-3:											rgba(0, 0, 0, 0.3);
+	--black-4:											rgba(0, 0, 0, 0.4);
+	--black-5:											rgba(0, 0, 0, 0.5);
+	--black-6:											rgba(0, 0, 0, 0.6);
+	--black-7:											rgba(0, 0, 0, 0.7);
+	--black-8:											rgba(0, 0, 0, 0.8);
+	--black-9:											rgba(0, 0, 0, 0.9);
+	--black-03:											rgba(0, 0, 0, 0.03);
+	--black-05:											rgba(0, 0, 0, 0.05);
+}
+
+/*Font Family*/
+$default-font-family:                                   var(--default-font-family);
+
+/*Body & Text colors*/
+$background: 											var(--default-body-bg-color);
+$background-color: 										var(--background-color);
+$default-text-color:									var(--default-text-color);
+$color-dark:											var(--color-dark);
+
+/*Default Background Color*/
+$default-background: 									var(--default-background);
+
+/*Border Color*/
+$border:										        var(--border);
+
+/*Input-Border Color*/
+$input-border:										    var(--input-border);
+$input-border2:										    var(--input-border2);
+
+/*Shadow*/
+$shadow:                                                var(--shadow);
+
+/*Border-width*/
+$border-width:                                          var(--border-width);
+
+/*Border-width*/
+$border-radius:                                          var(--border-radius);
+
+
+/*menu variables*/
+$menu-color:                                            rgb(var(--menu-color));
+
+/*Color Variables*/
+$primary:												var(--primary-color);
+$primary-border:										var(--primary-border);
+$primary-hover:										    var(--primary-hover);
+$primary-transparent:									var(--primary-transparent-color);
+$primary-005:											var(--primary005);
+$primary-006:											var(--primary006);
+$primary-008:											var(--primary008);
+$primary-004:											var(--primary004);
+$primary-01:											var(--primary01);
+$primary-02:											var(--primary02);
+$primary-03:											var(--primary03);
+$primary-04:											var(--primary04);
+$primary-05:											var(--primary05);
+$primary-06:											var(--primary06);
+$primary-07:											var(--primary07);
+$primary-08:											var(--primary08);
+$primary-09:											var(--primary09);
+$primary-shadow:										var(--primary-shadow);
+$custom-white:											var(--custom-white);
+$custom-black:											var(--custom-black);
+$secondary:												rgb(var(--secondary-rgb));
+$primary-light:											rgb(var(--primary-rgb-light));
+$primary-light2:										rgb(var(--primary-rgb-light2));
+$warning:												rgb(var(--warning-rgb));
+$info:													rgb(var(--info-rgb));
+$success:												rgb(var(--success-rgb));
+$danger:												rgb(var(--danger-rgb));
+$light:													rgb(var(--light-rgb));
+$dark:													rgb(var(--dark-rgb));
+$orange:												rgb(var(--orange-rgb));
+$purple:												rgb(var(--purple-rgb));
+$teal:													rgb(var(--teal-rgb));
+$pink:													rgb(var(--pink-rgb));
+$blue:													rgb(var(--blue-rgb));
+$muted:											        var(--muted);
+$muted2:											    var(--muted2);
+$red:                                                   #f14343;
+$green:													#2dce89;
+$cyan:													#00D1D1;
+$indigo:												#5b67c7;
+$white:													#fff;
+$gray:													#8699A3;
+$gray1:													#a5afad;
+$gray-light:											#fbfbfb;
+$black:													#000;
+$yellow:												#ffc102;
+$light-green:											#c0e9a5;
+
+
+/*gradient variables*/
+$primary-gradient:                                      linear-gradient(to right, $primary 0%, rgba(var(--secondary-rgb), 0.87) 100%);
+$secondary-gradient:                                    linear-gradient(to right, $secondary 0%, rgba(var(--secondary-rgb), 0.55) 100%);
+$success-gradient:                                      linear-gradient(to right, $success 0%, rgba(var(--success-rgb), 0.55) 100%);
+$warning-gradient:                                      linear-gradient(to right, $warning 0%, rgba(var(--warning-rgb), 0.55) 100%);
+$pink-gradient:                                         linear-gradient(to right, $pink 0%, rgba(var(--pink-rgb), 0.55) 100%);
+$teal-gradient:                                         linear-gradient(to right, $teal 0%, rgba(var(--teal-rgb), 0.55) 100%);
+$danger-gradient:                                       linear-gradient(to right, $danger 0%, rgba(var(--danger-rgb), 0.55) 100%);
+$info-gradient:                                         linear-gradient(to right, $info 0%, rgba(var(--info-rgb), 0.55) 100%);
+$orange-gradient:                                       linear-gradient(to right, $orange 0%, rgba(var(--orange-rgb), 0.55) 100%);
+$purple-gradient:                                       linear-gradient(to right, $purple 0%, rgba(var(--purple-rgb), 0.55) 100%);
+$blue-gradient:                                         linear-gradient(to right, $blue 0%, rgba(var(--blue-rgb), 0.55) 100%);
+
+/*gray set*/
+$gray-100:												var(--gray-100);
+$gray-200:												var(--gray-200);
+$gray-300:												var(--gray-300);
+$gray-400:												var(--gray-400);
+$gray-500:												var(--gray-500);
+$gray-600:												var(--gray-600);
+$gray-700:												var(--gray-700);
+$gray-800:												var(--gray-800);
+$gray-900:												var(--gray-900);
+
+/*white set*/
+$white-1:												var(--white-1);
+$white-2:												var(--white-2);
+$white-3:												var(--white-3);
+$white-4:												var(--white-4);
+$white-5:												var(--white-5);
+$white-6:												var(--white-6);
+$white-7:												var(--white-7);
+$white-8:												var(--white-8);
+$white-9:												var(--white-9);
+$white-05:												var(--white-05);
+$white-06:												var(--white-06);
+$white-07:												var(--white-07);
+$white-75:												var(--white-75);
+$white-08:												var(--white-08);
+
+/*black set*/
+$black-1:												var(--black-1);
+$black-2:												var(--black-2);
+$black-3:												var(--black-3);
+$black-4:												var(--black-4);
+$black-5:												var(--black-5);
+$black-6:												var(--black-6);
+$black-7:												var(--black-7);
+$black-8:												var(--black-8);
+$black-9:												var(--black-9);
+$black-03:												var(--black-03);
+$black-05:												var(--black-05);
+
+/* dark mode */
+[data-theme-mode="dark"] {
+	--body-bg-rgb: 										0, 12, 30;
+	--body-bg-rgb2: 									6, 19, 38;
+	--custom-white:										rgb(var(--body-bg-rgb));		
+	--custom-black:										#fff;		
+	--border:									        rgba(255, 255, 255, 0.1);
+	--input-border:									    rgba(255, 255, 255, 0.1);
+	--input-border2:									rgba(255, 255, 255, 0.1);
+	--default-text-color:       						rgba(255, 255, 255, 0.6);
+	--color-dark:                                       #fff;
+	--dark-rgb :										40 ,40 ,40; 
+	--default-background:								rgba(255, 255, 255, 0.1);
+	--default-body-bg-color:							rgb(var(--body-bg-rgb2));	
+	--background-color:							        rgb(var(--body-bg-rgb));	
+	--muted: 										    rgba(255, 255, 255, 0.4);
+	--muted2: 										    rgba(255, 255, 255, 0.4);
+	--light-rgb:										53, 63, 78;
+	--menu-color:										255, 255, 255, 0.6;
+
+	/* Gray Set */
+    --gray-100: 										rgba(255, 255, 255, 0.02);
+    --gray-200: 										rgba(255, 255, 255, 0.05);
+    --gray-300: 										rgba(255, 255, 255, 0.1);
+    --gray-400: 										rgba(255, 255, 255, 0.15);
+    --gray-500: 										rgba(255, 255, 255, 0.2);
+    --gray-600: 										rgba(255, 255, 255, 0.6);
+    --gray-700: 										rgba(255, 255, 255, 0.3);
+    --gray-800: 										rgba(255, 255, 255, 0.35);
+    --gray-900: 										rgba(255, 255, 255, 0.4);
+
+	/* white set */
+	--white-1:											rgba(0, 0, 0, 0.1);
+	--white-2:											rgba(0, 0, 0, 0.2);
+	--white-3:											rgba(0, 0, 0, 0.3);
+	--white-4:											rgba(0, 0, 0, 0.4);
+	--white-5:											rgba(0, 0, 0, 0.5);
+	--white-6:											rgba(0, 0, 0, 0.6);
+	--white-7:											rgba(0, 0, 0, 0.7);
+	--white-8:											rgba(0, 0, 0, 0.8);
+	--white-9:											rgba(0, 0, 0, 0.9);
+	--white-05:											rgba(0, 0, 0, 0.05);
+	--white-07:											rgba(0, 0, 0, 0.07);
+	--white-75:											rgba(0, 0, 0, 0.075);
+	--white-08:											rgba(0, 0, 0, 0.08);
+	
+	/* black set */
+	--black-1:											rgba(255, 255, 255, 0.1);
+	--black-2:											rgba(255, 255, 255, 0.2);
+	--black-3:											rgba(255, 255, 255, 0.3);
+	--black-4:											rgba(255, 255, 255, 0.4);
+	--black-5:											rgba(255, 255, 255, 0.5);
+	--black-6:											rgba(255, 255, 255, 0.6);
+	--black-7:											rgba(255, 255, 255, 0.7);
+	--black-8:											rgba(255, 255, 255, 0.8);
+	--black-9:											rgba(255, 255, 255, 0.9);
+	--black-03:											rgba(255, 255, 255, 0.03);
+	--black-05:											rgba(255, 255, 255, 0.05);
+}

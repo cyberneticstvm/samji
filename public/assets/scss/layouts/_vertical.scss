@@ -1,0 +1,421 @@
+/* Start:: Vertical */
+.main-sidebar {
+  margin-block-start: 3.72rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 5rem;
+  height: 100vh;
+  position: relative;
+  overflow: auto;
+}
+
+.app-sidebar {
+  width: 18rem;
+  height: 100%;
+  position: fixed;
+  inset-inline-start: 0;
+  z-index: 100;
+  transition: all 0.1s ease;
+
+  .main-sidebar-header {
+    height: 3.75rem;
+    width: 15rem;
+    position: fixed;
+    display: flex;
+    background: $primary-09;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+    padding: 0.813rem 1.25rem;
+    border-inline-end: 1px solid $border;
+    border-block-end: 1px solid $border;
+    transition: all 0.1s ease;
+  }
+
+  .slide__category {
+    color: $primary;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.065rem;
+    text-transform: uppercase;
+    padding: 0.95rem 1.65rem;
+    white-space: nowrap;
+    opacity: 0.5;
+    padding-block-start: 1.5rem !important;
+  }
+
+  .slide {
+    margin: 0;
+    padding: 0rem 0.625rem;
+  }
+
+  .side-menu__item {
+    padding: 1.3rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.84rem;
+    color: $default-text-color;
+    font-weight: 400;
+
+    &.active,
+    &:hover {
+
+      color: $primary;
+      &:before {
+        color: $primary !important;
+      }
+
+      .side-menu__icon {
+        fill: $primary;
+      }
+
+      h6 {
+        color: $primary;
+      }
+    }
+  }
+
+  .slide-menu {
+    padding: 0rem;
+  }
+
+  .slide-menu {
+    &.child1 {
+      .slide {
+        padding: 3px 16px;
+      }
+    }
+
+    &.child2,
+    &.child3 {
+      padding: 1rem 0;
+      .slide {
+        padding: 3px 14px;
+      }
+    }
+  }
+
+  .slide-menu {
+    &.child1.mega-slide-menu-onefr.without-icon {
+      .child2,
+      .child3 {
+        padding-block-start: 0.6rem;
+        padding-block-end: 0.5rem;
+      }
+    }
+    &.child1.mega-slide-menu-onefr.without-icon {
+      .slide {
+        &:hover,
+        &.active {
+          color: $primary;
+
+          &:before {
+            background-color: $secondary;
+          }
+        }
+      }
+
+      li {
+        padding-inline-start: 1.3rem;
+        position: relative;
+      }
+    }
+
+    &.child2,
+    &.child3 {
+      .slide {
+        &:before {
+          inset-block-start: 14px !important;
+        }
+      }
+    }
+    &.child1,
+    &.child2,
+    &.child3 {
+      .side-menu__angle {
+        margin-inline-start: auto !important;
+      }
+    }
+  }
+
+  .side-menu__label {
+    white-space: nowrap;
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  .side-menu__icon {
+    margin-inline-end: 0.625rem;
+    font-size: 1rem;
+    text-align: center;
+    color: $default-text-color;
+    fill: $default-text-color;
+  }
+
+  .side-menu__angle {
+    transform-origin: center;
+    font-size: 0.75rem;
+    transition: all 0.1s ease;
+  }
+
+  .slide.side-menu__label1 {
+    display: none;
+  }
+}
+
+.horizontal-logo {
+  padding: 0.85rem 0rem;
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .app-sidebar {
+    background-color: $custom-white;
+    inset-inline-start: -19rem;
+    z-index: 999;
+    top: 0;
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+  .horizontal-logo {
+    .header-logo {
+      .desktop-logo,
+      .desktop-dark,
+      .toggle-dark {
+        display: none;
+      }
+
+      .toggle-logo {
+        display: block;
+      }
+    }
+  }
+
+  .app-sidebar .slide-menu {
+    &.child1 {
+      .slide {
+        padding: 0.6rem 0.6rem;
+      }
+    }
+
+    &.child2,
+    &.child3 {
+      .slide {
+        padding: 0.4rem 0.6rem;
+      }
+    }
+  }
+
+  .app-sidebar .side-menu__item {
+    padding: 1rem 0.25rem;
+  }
+
+  .app-sidebar .side-menu__angle {
+    margin-inline-start: auto;
+  }
+
+  .menu-banner {
+    display: none;
+  }
+
+  .app-sidebar {
+    .slide-menu.child1.mega-slide-menu-onefr
+    {
+      ul:first-child {
+        padding-inline-start: 0;
+      }
+    }
+  }
+
+  .mega-menu {
+    .col {
+      padding-inline: 0;
+      flex-basis: 100%;
+    }
+  }
+
+  .app-sidebar .slide {
+    padding: 0rem 1rem;
+  }
+
+  .menu-label {
+    margin-inline: 0px;
+    margin-block-start: 10px;
+
+    i {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+
+  .app-sidebar {
+    border-inline-end: 1px solid $border;
+  }
+}
+
+.slide.has-sub .slide-menu {
+  transform: translate(0, 0) !important;
+  visibility: visible !important;
+}
+
+.nav ul li {
+  list-style-type: none;
+}
+
+.nav > ul {
+  padding-inline-start: 0px;
+}
+
+.slide-menu {
+  display: none;
+}
+
+.slide.has-sub {
+  display: grid;
+
+  &.open {
+
+    .slide.has-sub {
+      &.open {
+        > .side-menu__item .side-menu__angle {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Styles Start */
+
+@media (max-width: 991.98px) {
+  .main-content {
+    padding-block-start: 3.75rem;
+  }
+
+  .main-header {
+    z-index: 100;
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline: 0;
+    box-shadow: 0 0 1rem $black-1;
+    transition: all 0.1s ease;
+    padding-block: 0.75rem;
+    margin: 0;
+    width: 100%;
+    background: var(--custom-white);
+
+    &.sticky-header {
+      box-shadow: 0 0.125rem 1rem 3px $black-1;
+    }
+  }
+
+  .header-02 header.main-header {
+    position: fixed;
+    top: 0;
+    border-radius: 0;
+  }
+
+  .main-sidebar-header {
+    display: none !important;
+  }
+
+  .main-sidebar {
+    margin-block-start: 0;
+  }
+
+  .header-element {
+    background-color: $secondary;
+    border-radius: 50px;
+    padding: 5px 10px;
+    border: 1px solid $secondary;
+  }
+
+  .brand-main {
+    .desktop-logo {
+      height: 1.8rem;
+    }
+  }
+  .header-2 {
+    .main-header {
+      background-color: transparent;
+    }
+  }
+
+  .main-content.header-02-content {
+    padding-block-start: 0;
+    .main-banner, .banner-2 {
+      padding-block-end: 8rem !important;
+      padding-block-start: 8rem !important;
+    }
+  }
+
+  .sticky.sticky-pin .header-2 {
+    .main-header {
+      background-color: $custom-white;
+    }
+  }
+
+  .main-menu-container {
+    display: block;
+
+    .login-btn {
+      border-color: $border;
+      color: $default-text-color;
+    }
+  }
+
+  .sidemenu-toggle {
+    display: flex;
+  }
+
+  .app-sidebar {
+    .slide-menu {
+      &.child1.mega-slide-menu-onefr.without-icon {
+        .slide {
+          &:before {
+            inset-inline-start: 9px;
+            inset-block-start: 17px;
+          }
+        }
+
+        li {
+          padding-inline-start: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.header-link-icon {
+  font-size: 20px;
+  color: $primary;
+  fill: $primary;
+  transition: all ease 0.3s;
+}
+
+.slide-menu .side-menu__item {
+  padding: 0;
+}
+.brand-main {
+  img {
+    height: 1.8rem;
+  }
+}
+.footer-logo-img {
+  height: 1.8rem;
+}
+.mobile-logo {
+  display: none;
+}
+/* Responsive Styles End */
+/* End:: Vertical */

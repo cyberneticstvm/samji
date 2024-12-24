@@ -1,0 +1,168 @@
+/* Start:: Dark-Styles */
+[data-theme-mode="dark"] {
+
+    input {
+      &[type="date"], &[type="datetime-local"], &[type="month"], &[type="time"], &[type="week"] {
+          &::-webkit-calendar-picker-indicator {
+              filter: invert(1);
+          }
+      }
+  }
+  .choices[data-type*="select-one"] .choices__button {
+    filter: invert(1);
+  }
+  .section-color {
+    background-color: #{$custom-white};
+  }
+  #svg-shape2,
+  #svg-shape3,
+  #svg-shape4,
+  #svg-shape5,
+  #svg-shape6,
+  #svg-shape7,
+  #svg-shape9,
+  #svg-shape8 {
+    path {
+      fill: #{$custom-white};
+    }
+  }
+  .text-dark {
+    color: $white !important;
+  }
+  .modal-header {
+    .btn-close {
+      filter: invert(1);
+    }
+  }
+  .desktop-logo {
+    &.logo-dark {
+      display: block;
+    }
+    &.logo-color {
+      display: none;
+    }
+  }
+  .card-title {
+    color: $white;
+  }
+  @media (min-width: 575.98px) {
+    .sticky {
+      &.sticky-pin {
+        .desktop-logo {
+          &.logo-dark {
+            display: block;
+          }
+          &.logo-color {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &[data-nav-layout="horizontal"] {
+    .menu-label {
+      color: #fff;
+    }
+  }
+  .btn-outline-light {
+    border-color: $border;
+  }
+  .btn-light {
+    color: $white;
+  }
+  .header-02 header .desktop-logo {
+    &.logo-color {
+      display: none;
+    }
+    &.logo-dark {
+      display: block;
+    }
+  }
+  .footer-style-1 {
+    .logo-dark {
+      display: block;
+    }
+    .logo-color {
+      display: none;
+    }
+  }
+  .list-group-item {
+    background: transparent;
+    color: $white;
+  }
+  .profile-timeline li::before {
+    border-color: $border;
+  }
+  .cat-card {
+    background-color : rgba(255, 255, 255, 0.08);
+    &:hover {
+      background-color : $primary;
+    }
+  }
+  &[data-nav-layout=horizontal] {
+    .side-menu__item {
+      &.active, &.hover {
+        .side-menu__label, .side-menu__angle {
+          color: $secondary !important;
+        }
+      }
+    }
+    .menu-label {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+  .section-bg-title {
+    color: white;
+  }
+  .app-sidebar .side-menu__item {
+    &.active, &:hover {
+      color: rgb(255, 255, 255);
+    }
+  }
+  .cat-card {
+    .cat-img svg path {
+      fill: rgba(255, 255, 255, 0.6);
+    }
+    &:hover {
+      .cat-img svg path {
+        fill: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    &[data-nav-layout="horizontal"] {
+      .header-2 {
+        .app-sidebar {
+          .slide .child1 .side-menu__item {
+            &.active, &:hover {
+              color: $secondary;
+              .side-menu__angle {
+                color: $secondary;
+              }
+            }
+          }
+        }
+      }
+      .app-sidebar {
+        .side-menu__item {
+          &.active, &:hover {
+            .side-menu__label, .side-menu__angle {
+              color: $secondary;
+            }
+          }
+        }
+      }
+      .listing-header-menu.sticky-pin {
+        .header-2 .app-sidebar .side-menu__item {
+          &.active, &:hover {
+            .side-menu__label, 
+            .side-menu__angle {
+                color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* End:: Dark-Styles */

@@ -1,0 +1,24 @@
+/* Start:: Modal */
+.modal-header {
+    padding: 1.25rem;
+    border-block-end: 1px solid $border;
+}
+
+.modal-content {
+    border-color: $border;
+    background-color: $custom-white;
+    border-radius: $border-radius !important;
+}
+
+.modal-header .btn-close {
+    font-size: .625rem;
+}
+
+.modal-title {
+    font-size: 1rem;
+}
+
+.modal-body {
+    padding: 1.25rem;
+}
+/* End:: Modal */

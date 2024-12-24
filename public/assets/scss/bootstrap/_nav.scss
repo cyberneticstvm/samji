@@ -1,0 +1,43 @@
+/* Start:: Navigation */
+.nav-link {
+  color: #{$color-dark};
+
+  &:hover,
+  &.active {
+    color: #{$primary};
+  }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: $primary;
+  color: $white;
+} /* Start::Nav-style-1 */
+.nav.nav-style-1 {
+  border: 0;
+}
+.nav.nav-style-1 .nav-item {
+  white-space: nowrap;
+}
+.nav.nav-style-1 .nav-link.active {
+  background-color: $primary;
+  color: #fff;
+}
+.nav.nav-style-1 .nav-link {
+  border-radius: $border-radius;
+  background-color: rgba(var(--primary-rgb), 0.06);
+  color: $primary;
+  border: 1px solid $border;
+}
+.tab-content .tab-pane {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: $default-text-color;
+}
+.item2-gl {
+  .tab-content .tab-pane {
+    padding: 0;
+  }
+}
+/* End::Nav-style-1 */
+/* End:: Navigation */

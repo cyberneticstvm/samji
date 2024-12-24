@@ -1,0 +1,54 @@
+/* Start:: Pagination */
+.page-link {
+    color: $default-text-color;
+    border-color: $border;
+    background-color: $custom-white;
+
+    &:hover {
+        border-color: $border;
+        background-color: $primary-01;
+        color: $primary;
+    }
+
+    &:focus {
+        box-shadow: none;
+        background-color: $primary-01;
+        color: $primary;
+    }
+}
+
+.page-item {
+    &.page-prev {
+        &.disabled {
+            color: $default-text-color;
+            opacity: 0.8;
+            .page-link {
+                background-color: $custom-white;
+                border-color: $border;
+                opacity: 0.7;
+                color: $default-text-color;
+            }
+        }
+    }
+
+    &.active {
+        .page-link {
+            background-color: $primary;
+            color: $white;
+            border-color: $primary;
+            box-shadow: none;
+
+            &:hover {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}
+.disabled > .page-link, .page-link.disabled {
+    color: $default-text-color;
+    background-color: $custom-white;
+    border-color: $border;
+    opacity: 0.7;
+}
+/* End:: Pagination */

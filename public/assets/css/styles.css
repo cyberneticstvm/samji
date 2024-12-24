@@ -44,7 +44,7 @@ Padding
 Typography
 Width
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
   --body-bg-rgb:	38 ,141 ,97;
   --primary-rgb:	0, 70, 177;
@@ -3386,27 +3386,27 @@ a.typewrite:hover {
 }
 
 .payment-maestro {
-  background-image: url(https://spruko.com/demo/roxlist/roxlist/assets/images/payments/maestro.svg);
+  background-image: url(../images/payments/maestro.svg);
 }
 
 .payment-paypal {
-  background-image: url(https://spruko.com/demo/roxlist/roxlist/assets/images/payments/paypal.svg);
+  background-image: url(../images/payments/paypal.svg);
 }
 
 .payment-visa {
-  background-image: url(https://spruko.com/demo/roxlist/roxlist/assets/images/payments/visa.svg);
+  background-image: url(../images/payments/visa.svg);
 }
 
 .payment-mastercard {
-  background-image: url(https://spruko.com/demo/roxlist/roxlist/assets/images/payments/mastercard.svg);
+  background-image: url(../images/payments/mastercard.svg);
 }
 
 .payment-cirrus {
-  background-image: url(https://spruko.com/demo/roxlist/roxlist/assets/images/payments/cirrus.svg);
+  background-image: url(../images/payments/cirrus.svg);
 }
 
 .payment-discover {
-  background-image: url(https://spruko.com/demo/roxlist/roxlist/assets/images/payments/discover.svg);
+  background-image: url(../images/payments/discover.svg);
 }
 
 .userprofile-container {
@@ -3824,7 +3824,7 @@ a.tag:hover {
 /* End:: Customs */
 /* Start:: Header */
 .main-header {
-  background-color: var(--primary-color);
+  background-color: transparent;
 }
 .main-header .nav-link {
   transition: all ease 0.2s;
@@ -3864,7 +3864,7 @@ a.tag:hover {
 @media (min-width: 992px) {
   .sticky.sticky-pin .app-sidebar .side-menu__label,
   .sticky.sticky-pin .app-sidebar .side-menu__angle {
-    color: #fff;
+    color: rgb(var(--menu-color));
     opacity: 1;
   }
 }
@@ -6139,7 +6139,7 @@ body.admin-dashboard {
     margin: 0 auto;
   }
   [data-nav-layout=horizontal] .head_menu_container {
-    background-color: var(--primary-color);
+    background-color: var(--custom-white);
     position: fixed;
     width: 100%;
     z-index: 9;
@@ -6447,7 +6447,7 @@ body.admin-dashboard {
   align-items: center;
   text-decoration: none;
   font-size: 0.84rem;
-  color: #fff;
+  color: var(--default-text-color);
   font-weight: 400;
 }
 .app-sidebar .side-menu__item.active, .app-sidebar .side-menu__item:hover {
@@ -6620,7 +6620,7 @@ body.admin-dashboard {
     padding-block: 0.75rem;
     margin: 0;
     width: 100%;
-    background: var(--primary-color);
+    background: var(--custom-white);
   }
   .main-header.sticky-header {
     box-shadow: 0 0.125rem 1rem 3px var(--black-1);
@@ -8899,17 +8899,6 @@ a.link-underline-dark {
   color: rgb(var(--secondary-rgb));
   opacity: 0.8;
   font-family: "remixicon" !important;
-}
-
-.cat-img i{
-  font-size: xxx-large !important;
-}
-.select2-container--default .select2-selection--single{
-  height: 40px !important;
-  border: 1px solid #eee !important;
-}
-.pagination .text-muted{
-  display: none !important;
 }
 
 /* End:: Extras */

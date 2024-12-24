@@ -1,0 +1,86 @@
+/* Start:: Alert */
+.alert {
+  padding: 0.625rem 0.85rem;
+  border-radius: $border-radius;
+  font-size: 0.8125rem;
+  &.alert-dismissible {
+    padding: 0.625rem 2.25rem 0.625rem 0.85rem;
+  }
+  .btn-close {
+    background-image: none;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .alert-link {
+    font-weight: 600;
+  }
+}
+[dir="rtl"] {
+  .alert.alert-dismissible {
+    padding: 0.625rem 0.85rem 0.625rem 2.25rem;
+  }
+}
+
+/* Basic Alerts */
+@mixin custom-close($default-text-color) {
+  background-color: $default-text-color;
+  color: $white;
+  opacity: 1;
+  border-radius: 50px;
+  box-shadow: $shadow;
+  padding: 0.85rem;
+}
+.alert-primary {
+  background-color: $primary-01;
+  color: $primary;
+  border-color: $primary-01;
+  .alert-link {
+    color: $primary;
+  }
+  .btn-close {
+    color: $primary;
+    &.custom-close {
+      @include custom-close($primary);
+    }
+  }
+}
+/* Basic Alerts */
+
+/* Solid Colored Alerts */
+@mixin alert-solid-color($color) {
+  background-color: $color;
+  color: $white;
+  border-color:  $color;
+  .btn-close {
+      color: $white;
+  }
+}
+.alert-solid-primary {
+  @include alert-solid-color($primary);
+}
+.alert-solid-secondary {
+  @include alert-solid-color($secondary);
+}
+.alert-solid-success {
+  @include alert-solid-color($success);
+}
+.alert-solid-info {
+  @include alert-solid-color($info);
+}
+.alert-solid-danger {
+  @include alert-solid-color($danger);
+}
+.alert-solid-warning {
+  @include alert-solid-color($warning);
+}
+/* Solid Colored Alerts */
+/* End:: Alert */

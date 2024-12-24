@@ -1,0 +1,49 @@
+/* Start:: Image */
+.avatar {
+  position: relative;
+  height: 2.625rem;
+  width: 2.625rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  line-height: 0;
+
+  &.avatar-xs {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &.avatar-lg {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  &.avatar-xl {
+    width: 5.3rem;
+    height: 5.3rem;
+  }
+
+  &.avatar-xxl {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+// stacked Avatar //
+.avatar-list-stacked {
+  padding: 0;
+}
+.avatar-list-stacked .avatar {
+  margin-inline-end: -0.65rem !important;
+  border: 1px solid $black-05;
+  vertical-align: middle;
+  transition: transform ease 200ms;
+  border: 2px solid $custom-white;
+}
+/* End:: Image */

@@ -1,0 +1,318 @@
+/* Start::Background */
+.bg-primary {
+    background-color: #{$primary} !important;
+}
+
+.bg-secondary {
+    background-color: #{$secondary} !important;
+}
+
+.bg-success {
+    background-color: #{$success} !important;
+}
+
+.bg-pink {
+    background-color: #{$pink} !important;
+}
+
+.bg-orange {
+    background-color: #{$orange} !important;
+}
+
+.bg-warning {
+    background-color: #{$warning} !important;
+}
+
+.bg-danger {
+    background-color: #{$danger} !important;
+}
+
+.bg-purple {
+    background-color: #{$purple} !important;
+}
+
+.bg-info {
+    background-color: #{$info} !important;
+}
+
+.bg-light {
+    background-color: #{$light} !important;
+}
+
+.bg-white {
+    background-color: #{$custom-white} !important;
+}
+.bg-black {
+    background-color: #{$custom-black} !important;
+}
+/* End::background color */
+
+
+/* Start::gray set */
+.bg-gray-100 {
+    background-color: #{$gray-100} !important;
+}
+
+.bg-gray-200 {
+    background-color: #{$gray-200} !important;
+}
+
+/* End::gray set */
+
+
+/* Start::background transparent */
+.bg-primary-transparent {
+    background-color: #{$primary-02};
+    border: 1px solid var(--primary01);
+}
+
+.bg-primary-transparent005 {
+    background-color:rgba(var(--primary-rgb), 0.05) !important;
+}
+
+.bg-primary-transparent01 {
+    background-color:rgba(var(--primary-rgb), 0.1) !important;
+}
+
+.bg-primary-transparent015 {
+    background-color:rgba(var(--primary-rgb), 0.15) !important;
+}
+
+.bg-primary-transparent009 {
+    background-color:rgba(var(--primary-rgb), 0.09) !important;
+}
+
+.bg-primary-transparent008 {
+    background-color:rgba(var(--primary-rgb), 0.08) !important;
+}
+
+.bg-primary-transparent007 {
+    background-color:rgba(var(--primary-rgb), 0.07) !important;
+}
+
+.bg-primary-transparent006 {
+    background-color:rgba(var(--primary-rgb), 0.06) !important;
+}
+
+.bg-secondary-transparent {
+    background-color: rgba(var(--secondary-rgb), 0.2);
+    border: 1px solid rgba(var(--secondary-rgb), 0.1);
+}
+
+.bg-secondary-transparent01 {
+    background-color: rgba(var(--secondary-rgb), 0.1);
+}
+
+.bg-info-transparent {
+    background-color: rgba(var(--info-rgb), 0.2);
+    border: 1px solid rgba(var(--info-rgb), 0.1);
+}
+
+.bg-info-transparent01 {
+    background-color: rgba(var(--info-rgb), 0.1);
+}
+
+.bg-success-transparent {
+    background-color: rgba(var(--success-rgb), 0.2);
+    border: 1px solid rgba(var(--success-rgb), 0.1);
+}
+
+.bg-success-transparent01 {
+    background-color: rgba(var(--success-rgb), 0.1);
+}
+
+.bg-warning-transparent {
+    background-color: rgba(var(--warning-rgb), 0.2);
+    border: 1px solid rgba(var(--warning-rgb), 0.1);
+}
+
+.bg-warning-transparent01 {
+    background-color: rgba(var(--warning-rgb), 0.1);
+}
+
+.bg-danger-transparent {
+    background-color: rgba(var(--danger-rgb), 0.2);
+    border: 1px solid rgba(var(--danger-rgb), 0.1);
+}
+
+.bg-danger-transparent01 {
+    background-color: rgba(var(--danger-rgb), 0.1);
+}
+
+.bg-pink-transparent {
+    background-color: rgba(var(--pink-rgb), 0.2);
+    border: 1px solid rgba(var(--pink-rgb), 0.1);
+}
+
+.bg-pink-transparent01 {
+    background-color: rgba(var(--pink-rgb), 0.1);
+}
+
+.bg-orange-transparent01 {
+    background-color: rgba(var(--orange-rgb), 0.1);
+}
+
+.bg-purple-transparent {
+    background-color: rgba(var(--purple-rgb), 0.2);
+    border: 1px solid rgba(var(--purple-rgb), 0.1);
+}
+
+.bg-purple-transparent01 {
+    background-color: rgba(var(--purple-rgb), 0.1);
+}
+
+.bg-teal-transparent {
+    background-color: rgba(var(--teal-rgb), 0.2);
+    border: 1px solid rgba(var(--teal-rgb), 0.1);
+}
+
+.bg-teal-transparent01 {
+    background-color: rgba(var(--teal-rgb), 0.1);
+}
+
+/* End::background transparent */
+
+/* Start::background gradient */
+.bg-primary-gradient {
+    background: #{$primary-gradient};
+}
+
+.bg-secondary-gradient {
+    background: #{$secondary-gradient};
+}
+
+.bg-success-gradient {
+    background: #{$success-gradient};
+}
+
+.bg-warning-gradient {
+    background: #{$warning-gradient};
+}
+
+.bg-pink-gradient {
+    background: #{$pink-gradient};
+}
+
+.bg-danger-gradient {
+    background: #{$danger-gradient};
+}
+
+.bg-info-gradient {
+    background: #{$info-gradient};
+}
+
+.bg-purple-gradient {
+    background: #{$purple-gradient};
+}
+
+.bg-teal-gradient {
+    background: #{$teal-gradient};
+}
+
+.bg-orange-gradient {
+    background: #{$orange-gradient};
+}
+
+.bg-blue-gradient {
+    background: $blue-gradient;
+}
+
+.bg-black-1 {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.bg-black-2 {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.bg-black-3 {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.bg-black-4 {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.bg-black-5 {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-white-1 {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.bg-white-2 {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.bg-white-3 {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.bg-white-4 {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.bg-white-9 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.bg-white-95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.bg-primary-01 {
+    background-color: #{$primary-01} !important;
+}
+
+.bg-primary-005 {
+    background-color: #{$primary-005} !important;
+}
+
+.bg-primary-006 {
+    background-color: #{$primary-006} !important;
+}
+
+.bg-primary-02 {
+    background-color: #{$primary-02} !important;
+}
+
+.bg-primary-03 {
+    background-color: #{$primary-03} !important;
+}
+
+.bg-primary-04 {
+    background-color: #{$primary-04} !important;
+}
+
+.bg-primary-05 {
+    background-color: #{$primary-05} !important;
+}
+
+.bg-primary-06 {
+    background-color: #{$primary-06} !important;
+}
+
+.bg-primary-07 {
+    background-color: #{$primary-07} !important;
+}
+
+.bg-primary-08 {
+    background-color: #{$primary-08} !important;
+}
+
+.bg-primary-09 {
+    background-color: #{$primary-09} !important;
+}
+
+/* End::background gradient */
+
+.svg-white {
+    fill: $white;
+}
+
+.svg-primary {
+  fill: $primary;
+}
+
+/* End::Background */

@@ -13,7 +13,7 @@
         <use xlink:href="#svg-shape"></use>
     </svg> <!--Shape End-->
 </section>
-<div class="section">
+<div class="section position-relative bg-white">
     <div class="container">
         <div class="row">
             <div class="col-xl-8 col-lg-8 col-md-12">

@@ -1,0 +1,25 @@
+/* Start:: Dropdown */
+.dropdown-menu {
+    border-color: $border;
+    background-color: $custom-white;
+}
+
+.dropdown-item {
+    color: $default-text-color;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    clear: both;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    font-size: 14px;
+    border: 0;
+
+    &:hover {
+        background-color: $primary-005;
+        color: $default-text-color;
+    }
+}
+/* End:: Dropdown */
