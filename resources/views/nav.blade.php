@@ -37,9 +37,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <!-- End::slide --> <!-- Start::slide -->
+                                        <li class="slide"> <a href="{{ route('econtact') }}" class="side-menu__item"> <span class="side-menu__label">Emergency Contacts</span> </a> </li>
                                         <li class="slide"> <a href="{{ route('contact') }}" class="side-menu__item"> <span class="side-menu__label">Contact Us</span> </a> </li>
-                                        <!-- End::slide -->
                                         @auth
                                         <li class="slide has-sub"> <a href="javascript:void(0);" class="side-menu__item"> <span class="side-menu__label">My Profile </span> <i class="fe fe-chevron-down side-menu__angle"></i> </a>
                                             <ul class="slide-menu child1 without-icon active" data-popper-placement="bottom" style="position: relative; left: 0px; top: 0px; margin: 0px; box-sizing: border-box; transform: translate(900px, 56px); display: none;">

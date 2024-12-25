@@ -27,6 +27,12 @@ class WebController extends Controller
         return view('contact', compact('page_title'));
     }
 
+    function econtact()
+    {
+        $page_title = 'Samji Web Portal - Emergency Contacts';
+        return view('emergency-contact', compact('page_title'));
+    }
+
     function viewRegistration()
     {
         $page_title = 'Samji Web Portal - Registration';

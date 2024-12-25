@@ -13,7 +13,7 @@
         <use xlink:href="#svg-shape"></use>
     </svg> <!--Shape End-->
 </section>
-<div class="section position-relative bg-white">
+<div class="section bg-white">
     <div class="container">
         <div class="row">
             <div class="col-xl-8 col-lg-8 col-md-12">
@@ -21,29 +21,37 @@
                     <div class="ribbon ribbon-top-right"><span class="bg-danger text-fixed-white">Offer</span></div>
                     <div class="card-body">
                         <div class="details-gallery mb-3">
-                            <div class="swiper thumb-1 swiper-initialized swiper-horizontal swiper-backface-hidden">
-                                <div class="swiper-wrapper" id="swiper-wrapper-e5b3d52589e2aa6d" aria-live="off" style="transition-duration: 300ms; transform: translate3d(-3244px, 0px, 0px);">
-                                    <div class="swiper-slide swiper-slide-next" role="group" aria-label="{{ $ad->images->count() }} / {{ $ad->images->count() }}" data-swiper-slide-index="{{ $ad->images->count() - 1 }}" style="width: 801px; margin-right: 10px;">
-                                        <a href="{{ url($ad->images?->first()?->image_url) }}" class="glightbox" data-gallery="gallery1"> <img src="{{ url($ad->images->first()->image_url) }}" alt="image">
+                            <div class="swiper thumb-1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="{{ url($ad->images?->first()?->image_url) }}" class="glightbox" data-gallery="gallery1">
+                                            <img src="{{ url($ad->images?->first()?->image_url) }}" alt="image">
                                         </a>
                                     </div>
                                     @forelse($ad->images as $key => $item)
-                                    <div class="swiper-slide" role="group" aria-label="{{ $key + 1 }} / {{ $ad->images?->count() }}" data-swiper-slide-index="{{ $key }}" style="width: 801px; margin-right: 10px;"> <a href="{{ url($item?->image_url) }}" class="glightbox" data-gallery="gallery1"> <img src="{{ url($item->image_url) }}" alt="image"> </a> </div>
+                                    <div class="swiper-slide">
+                                        <a href="{{ url($item?->image_url) }}" class="glightbox" data-gallery="gallery1">
+                                            <img src="{{ url($item?->image_url) }}" alt="image">
+                                        </a>
+                                    </div>
                                     @empty
                                     @endforelse
                                 </div>
-                                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-e5b3d52589e2aa6d"></div>
-                                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-e5b3d52589e2aa6d"></div>
-                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
-                            <div class="swiper thumb-2 swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
-                                <div class="swiper-wrapper" id="swiper-wrapper-37dc8d1098ee103b76" aria-live="off" style="transform: translate3d(0px, 0px, 0px); transition-duration: 300ms;">
-                                    @forelse($ad->images as $key1 => $item)
-                                    <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible {{ $key1 == 0 ? 'swiper-slide-active' : 'swiper-slide-next' }}" role="group" aria-label="{{ $key1 + 1 }} / {{ $ad->images?->count() }}" data-swiper-slide-index="{{ $key1 }}" style="width: 152.2px; margin-right: 10px;"> <img src="{{ url($item?->image_url) }}" alt="image"> </div>
+                            <div class="swiper thumb-2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="{{ url($ad->images?->first()?->image_url) }}" alt="image">
+                                    </div>
+                                    @forelse($ad->images as $key => $item)
+                                    <div class="swiper-slide">
+                                        <img src="{{ url($item?->image_url) }}" alt="image">
+                                    </div>
                                     @empty
                                     @endforelse
                                 </div>
-                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between gap-1 flex-wrap">

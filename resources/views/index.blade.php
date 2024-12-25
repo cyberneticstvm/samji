@@ -11,7 +11,7 @@
                     <p class="mb-3 fs-13 text-uppercase text-secondary fw-semibold section-bg-title text-start ms-3">
                         Business Towards Success
                     </p>
-                    <h1 class="mb-3 fw-semibold text-fixed-white">Unveiling the World's Largest <span class="text-secondary">Business Directory</span> for Global Entrepreneurs</h1>
+                    <h1 class="mb-3 fw-semibold text-fixed-white">Unveiling the India's Largest <span class="text-secondary">Business Directory</span> for Global Entrepreneurs</h1>
                     <p class="mb-5 sub-text text-fixed-white">Are you looking for a comprehensive classifieds business directory that offers listings for real estate, matrimonials, jobs, education, and more </p>
                 </div>
                 <div class="form d-md-flex  bg-white w-100 rounded-1 shadow-primary-sm banner-input-group text-start">
@@ -62,13 +62,76 @@
     <!--Shape End-->
 </section>
 <!--Banner Section-->
-<!--Categories-->
-<section class="section bg-white position-relative">
-    <div class="container mb-5">
-        <div class="holder">
-            <p class="news text-primary">REGISTRATION FREE !!! WWW.SAMJIAPP.COM, MORE THAN HUNDRED SERVICE PROVIDERS AVAILABILE AT ONE LOGIN. DOWNLOAD SAMJIAPP FROM link</p>
+<section class="section position-relative bg-white">
+    <div class="container">
+        <!-- Start:: row-1 -->
+        <div class="row">
+            <div class="section-title center-block text-center mb-6">
+                <h2>Latest News</h2>
+            </div>
+            <div class="card bg-primary-transparent01">
+                <div class="card-body">
+                    <blockquote class="quote mb-0">
+                        <marquee behavious="scroll" direction="left">
+                            <p class="text-primary">FREE REGISTRATION!!!. <a href="{{ route('index') }}">www.samjiapp.com</a> more than hundred service providers available at one login. Download Samji App from link. </p>
+                        </marquee>
+                    </blockquote>
+                </div>
+            </div>
         </div>
     </div>
+</section>
+<section class="section position-relative bg-white">
+    <div class="container">
+        <!-- Start:: row-1 -->
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between flex-wrap gap-2">
+                        <h5 class="card-title my-auto">
+                            Advertise Here!
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote custom-blockquote secondary mb-0 text-center">
+                            <h6>The future belongs to those who believe in the beauty of their dreams..</h6>
+                            <footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0">Someone famous as <cite title="Source Title">-Eleanor Roosevelt</cite></footer>
+                            <span class="quote-icon"><i class="ri-information-line"></i></span>
+                        </blockquote>
+                    </div>
+                    <div class="card-footer d-none border-top-0">
+                        <!-- Prism Code -->
+                        <pre class="language-html"><code class="language-html">&lt;blockquote class="blockquote custom-blockquote secondary mb-0 text-center"&gt;&lt;h6&gt;The future belongs to those who believe in the beauty of their dreams..&lt;/h6&gt;&lt;footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0"&gt;Someone famous as &lt;cite title="Source Title"&gt;-Eleanor Roosevelt&lt;/cite&gt;&lt;/footer&gt;&lt;span class="quote-icon"&gt;&lt;i class="ri-information-line"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/blockquote&gt;</code></pre>
+                        <!-- Prism Code -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between flex-wrap gap-2">
+                        <h5 class="card-title my-auto">
+                            Advertise Here!
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote custom-blockquote secondary mb-0 text-center">
+                            <h6>The future belongs to those who believe in the beauty of their dreams..</h6>
+                            <footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0">Someone famous as <cite title="Source Title">-Eleanor Roosevelt</cite></footer>
+                            <span class="quote-icon"><i class="ri-information-line"></i></span>
+                        </blockquote>
+                    </div>
+                    <div class="card-footer d-none border-top-0">
+                        <!-- Prism Code -->
+                        <pre class="language-html"><code class="language-html">&lt;blockquote class="blockquote custom-blockquote secondary mb-0 text-center"&gt;&lt;h6&gt;The future belongs to those who believe in the beauty of their dreams..&lt;/h6&gt;&lt;footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0"&gt;Someone famous as &lt;cite title="Source Title"&gt;-Eleanor Roosevelt&lt;/cite&gt;&lt;/footer&gt;&lt;span class="quote-icon"&gt;&lt;i class="ri-information-line"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/blockquote&gt;</code></pre>
+                        <!-- Prism Code -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Categories-->
+<section class="section bg-white position-relative">
     <div class="text-center"> <span class="section-bg-title">Areas</span> </div>
     <div class="container">
         <div class="section-title center-block text-center mb-6">
@@ -99,6 +162,34 @@
     </div>
 </section>
 <!--/Categories-->
+<section class="section position-relative bg-white">
+    <div class="container">
+        <!-- Start:: row-1 -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between flex-wrap gap-2">
+                        <h5 class="card-title my-auto">
+                            Advertise Here!
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote custom-blockquote secondary mb-0 text-center">
+                            <h6>The future belongs to those who believe in the beauty of their dreams..</h6>
+                            <footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0">Someone famous as <cite title="Source Title">-Eleanor Roosevelt</cite></footer>
+                            <span class="quote-icon"><i class="ri-information-line"></i></span>
+                        </blockquote>
+                    </div>
+                    <div class="card-footer d-none border-top-0">
+                        <!-- Prism Code -->
+                        <pre class="language-html"><code class="language-html">&lt;blockquote class="blockquote custom-blockquote secondary mb-0 text-center"&gt;&lt;h6&gt;The future belongs to those who believe in the beauty of their dreams..&lt;/h6&gt;&lt;footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0"&gt;Someone famous as &lt;cite title="Source Title"&gt;-Eleanor Roosevelt&lt;/cite&gt;&lt;/footer&gt;&lt;span class="quote-icon"&gt;&lt;i class="ri-information-line"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/blockquote&gt;</code></pre>
+                        <!-- Prism Code -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--Search Experience-->
 <section class="section bg-white position-relative">
     <div class="text-center"> <span class="section-bg-title">Experience</span> </div>

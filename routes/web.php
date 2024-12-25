@@ -13,6 +13,7 @@ Route::middleware(['web'])->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/about', 'about')->name('about');
         Route::get('/contact', 'contact')->name('contact');
+        Route::get('/emergency-contact', 'econtact')->name('econtact');
 
         Route::get('/register', 'viewRegistration')->name('registration');
         Route::post('/register', 'saveRegistration')->name('registration.save');
