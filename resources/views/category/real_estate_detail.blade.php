@@ -24,14 +24,14 @@
                             <div class="swiper thumb-1">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="{{ url($ad->images?->first()?->image_url) }}" class="glightbox" data-gallery="gallery1">
-                                            <img src="{{ url($ad->images?->first()?->image_url) }}" alt="image">
+                                        <a href="{{ asset($ad->images?->first()?->image_url) }}" class="glightbox" data-gallery="gallery1">
+                                            <img src="{{ asset($ad->images?->first()?->image_url) }}" alt="image">
                                         </a>
                                     </div>
                                     @forelse($ad->images as $key => $item)
                                     <div class="swiper-slide">
-                                        <a href="{{ url($item?->image_url) }}" class="glightbox" data-gallery="gallery1">
-                                            <img src="{{ url($item?->image_url) }}" alt="image">
+                                        <a href="{{ asset($item?->image_url) }}" class="glightbox" data-gallery="gallery1">
+                                            <img src="{{ asset($item?->image_url) }}" alt="image">
                                         </a>
                                     </div>
                                     @empty
@@ -43,11 +43,11 @@
                             <div class="swiper thumb-2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="{{ url($ad->images?->first()?->image_url) }}" alt="image">
+                                        <img src="{{ asset($ad->images?->first()?->image_url) }}" alt="image">
                                     </div>
                                     @forelse($ad->images as $key => $item)
                                     <div class="swiper-slide">
-                                        <img src="{{ url($item?->image_url) }}" alt="image">
+                                        <img src="{{ asset($item?->image_url) }}" alt="image">
                                     </div>
                                     @empty
                                     @endforelse
