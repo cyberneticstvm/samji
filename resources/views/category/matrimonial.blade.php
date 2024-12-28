@@ -50,15 +50,112 @@
                         <h5 class="card-title mb-0">Religion</h5>
                     </div>
                     <div class="card-body text-center">
-                        <div class="form-check mb-2 text-start"> <input class="form-check-input" type="checkbox" value="" id="ComputerOperator"> <label class="form-check-label" for="ComputerOperator"> All </label> <span class="badge bg-light text-dark float-end">14</span> </div>
-                        <div class="form-check mb-2 text-start"> <input class="form-check-input" type="checkbox" value="" id="Admin"> <label class="form-check-label" for="Admin"> Hindu </label> <span class="badge bg-light text-dark float-end">22</span> </div>
-                        <div class="form-check mb-2 text-start"> <input class="form-check-input" type="checkbox" value="" id="Admin"> <label class="form-check-label" for="Admin"> Christian </label> <span class="badge bg-light text-dark float-end">22</span> </div>
-                        <div class="form-check mb-2 text-start"> <input class="form-check-input" type="checkbox" value="" id="Admin"> <label class="form-check-label" for="Admin"> Muslim </label> <span class="badge bg-light text-dark float-end">22</span> </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="ComputerOperator">
+                            <label class="form-check-label" for="ComputerOperator">
+                                Hindu
+                            </label>
+                            <span class="badge bg-light text-dark float-end">14</span>
+                        </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="Admin">
+                            <label class="form-check-label" for="Admin">
+                                Christian
+                            </label>
+                            <span class="badge bg-light text-dark float-end">22</span>
+                        </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="Chef" checked>
+                            <label class="form-check-label" for="Chef">
+                                Muslim
+                            </label>
+                            <span class="badge bg-light text-dark float-end">78</span>
+                        </div>
                         <div class="collapse" id="category-more">
-                            <div class="form-check mb-2 text-start"> <input class="form-check-input" type="checkbox" value="" id="IT-Software"> <label class="form-check-label" for="IT-Software"> Jane </label> <span class="badge bg-light text-dark float-end">45</span> </div>
-                            <div class="form-check mb-2 text-start"> <input class="form-check-input" type="checkbox" value="" id="IT-Software"> <label class="form-check-label" for="IT-Software"> Parsi </label> <span class="badge bg-light text-dark float-end">45</span> </div>
+                            <div class="form-check mb-2 text-start">
+                                <input class="form-check-input" type="checkbox" value="" id="IT-Software">
+                                <label class="form-check-label" for="IT-Software">
+                                    Other
+                                </label>
+                                <span class="badge bg-light text-dark float-end">45</span>
+                            </div>
                         </div>
                         <a class="show-more-link" data-bs-toggle="collapse" href="#category-more" aria-expanded="false" aria-controls="category-more">Show More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Caste</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="ComputerOperator">
+                            <label class="form-check-label" for="ComputerOperator">
+                                Nair
+                            </label>
+                            <span class="badge bg-light text-dark float-end">14</span>
+                        </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="Admin">
+                            <label class="form-check-label" for="Admin">
+                                Ezhava
+                            </label>
+                            <span class="badge bg-light text-dark float-end">22</span>
+                        </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="Chef" checked>
+                            <label class="form-check-label" for="Chef">
+                                Orthodox
+                            </label>
+                            <span class="badge bg-light text-dark float-end">78</span>
+                        </div>
+                        <div class="collapse" id="category-more1">
+                            <div class="form-check mb-2 text-start">
+                                <input class="form-check-input" type="checkbox" value="" id="IT-Software">
+                                <label class="form-check-label" for="IT-Software">
+                                    Other
+                                </label>
+                                <span class="badge bg-light text-dark float-end">45</span>
+                            </div>
+                        </div>
+                        <a class="show-more-link" data-bs-toggle="collapse" href="#category-more1" aria-expanded="false" aria-controls="category-more1">Show More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Posted Time</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="Anytime">
+                            <label class="form-check-label" for="Anytime">
+                                Anytime
+                            </label>
+                        </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="Today">
+                            <label class="form-check-label" for="Today">
+                                Today
+                            </label>
+                        </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="Yesterday">
+                            <label class="form-check-label" for="Yesterday">
+                                Yesterday
+                            </label>
+                        </div>
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="days">
+                            <label class="form-check-label" for="days">
+                                3Days ago
+                            </label>
+                        </div>
+                        <div class="form-check mb-0 text-start">
+                            <input class="form-check-input" type="checkbox" value="" id="week">
+                            <label class="form-check-label" for="week">
+                                One week ago
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,25 +171,10 @@
                                 </ul>
                                 <div class="d-flex mt-3 mt-sm-0 choices-tab">
                                     <label class="me-2 my-auto">Sort By:</label>
-                                    <div class="choices" data-type="select-one" tabindex="0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false">
-                                        <div class="choices__inner">
-                                            <select class="form-control choices__input" data-trigger="" hidden="" tabindex="-1" data-choice="active">
-                                                <option value="1" data-custom-properties="[object Object]">Latest</option>
-                                            </select>
-                                            <div class="choices__list choices__list--single">
-                                                <div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="1" data-custom-properties="[object Object]" aria-selected="true">Latest</div>
-                                            </div>
-                                        </div>
-                                        <div class="choices__list choices__list--dropdown" aria-expanded="false">
-                                            <input type="search" name="search_terms" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="This is a placeholder set in the config" placeholder="Search Here">
-                                            <div class="choices__list" role="listbox">
-                                                <div id="choices--nlae-item-choice-1" class="choices__item choices__item--choice is-selected choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="1" data-select-text="Press to select" data-choice-selectable="" aria-selected="true">Latest</div>
-                                                <div id="choices--nlae-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="2" data-select-text="Press to select" data-choice-selectable="">Oldest</div>
-                                                <div id="choices--nlae-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="5" data-select-text="Press to select" data-choice-selectable="">Price:Hight-to-Low</div>
-                                                <div id="choices--nlae-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="3" data-select-text="Press to select" data-choice-selectable="">Price:Low-to-High</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <select class="form-control" data-trigger>
+                                        <option value="1">Latest</option>
+                                        <option value="2">Oldest</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>

@@ -79,56 +79,14 @@
                     <div class="card-body">
                         <h5 class="card-title mb-3">Description</h5>
                         <div class="mb-0">
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atcorrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoraliz the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble thena bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
-                        </div>
-                        <h5 class="card-title mt-4 mb-3">Specifications</h5>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="table-responsive">
-                                    <table class="table mb-0 table-bordered-0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="fw-semibold px-0 border-bottom-0">Guests </td>
-                                                <td class="border-bottom-0">:</td>
-                                                <td class="px-0 border-bottom-0">150</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold px-0 border-bottom-0">Capacity </td>
-                                                <td class="border-bottom-0">:</td>
-                                                <td class="px-0 border-bottom-0">1500</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold px-0 border-bottom-0">Wifi </td>
-                                                <td class="border-bottom-0">:</td>
-                                                <td class="px-0 border-bottom-0">Access</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold px-0 border-bottom-0">Parking </td>
-                                                <td class="border-bottom-0">:</td>
-                                                <td class="px-0 border-bottom-0">Yes</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold px-0 border-bottom-0">Style </td>
-                                                <td class="border-bottom-0">:</td>
-                                                <td class="px-0 border-bottom-0"> Outdoor , Beach</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold px-0 border-bottom-0 pb-0">Transportation </td>
-                                                <td class="border-bottom-0 pb-0">:</td>
-                                                <td class="px-0 border-bottom-0 pb-0">Near By</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                            {!! $ad->description !!}
                         </div>
                     </div>
                     <div class="card-body border-top border-bottom py-2">
                         <div class="list-id">
                             <div class="row">
-                                <div class="col"> <a class="mb-0">Venue ID : #6235986</a> </div>
-                                <div class="col col-auto"> Posted By <a class="mb-0 fw-semibold">Individual</a> / 21st June 2023 </div>
+                                <div class="col"> <a class="mb-0">Registration ID : #{{ $ad->registration_id }}</a> </div>
+                                <div class="col col-auto"> Posted By <a class="mb-0 fw-semibold">{{ $ad->user->name }}</a> / {{ $ad->created_at->format('d M, Y') }} </div>
                             </div>
                         </div>
                     </div>
@@ -147,13 +105,13 @@
                         </div>
                         <div class="card-body">
                             <div class="text-center mb-0">
-                                <img src="../assets/images/faces/male/2.jpg" class="rounded-circle" alt="user">
+                                <img src="{{ asset('/assets/images/faces/male/avatar.png') }}" class="rounded-circle" width="30%" alt="user">
                                 <div class="">
                                     <a href="userprofile.html" class="text-dark">
-                                        <h4 class="mt-3 mb-1 fw-semibold fs-18">Robert McLean</h4>
+                                        <h4 class="mt-3 mb-1 fw-semibold fs-18">{{ $ad->user->name }}</h4>
                                     </a>
-                                    <p class="mb-1">Roxlist property Agent</p>
-                                    <span class="text-muted">Member Since November 2008</span>
+                                    <p class="mb-1">Samji Property Agent</p>
+                                    <span class="text-muted">Member Since {{ $ad->user->created_at->format('M Y') }}</span>
                                     <div> <a href="ad-list.html" class="btn btn-primary waves-effect waves-light mt-3">See All Properties</a> </div>
                                 </div>
                             </div>
@@ -161,14 +119,35 @@
                         <div class="card-body item-user">
                             <h4 class="mb-3 fs-18">Contact Info</h4>
                             <div>
-                                <p class="mb-3"><span><i class="fe fe-map-pin me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> 7981 Aspen Ave. Hammonton, USA</a></p>
-                                <p class="mb-3"><span><i class="fe fe-mail me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> robert123@gmail.com</a></p>
-                                <p class="mb-3"><span><i class="fe fe-phone me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> 0-235-657-24587</a></p>
-                                <p class="mb-0"><span><i class="fe fe-link me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default">http://spruko.com/</a></p>
+                                <p class="mb-3"><span><i class="fe fe-map-pin me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> Kowdiar, Thiruvananthapuram</a></p>
+                                <p class="mb-3"><span><i class="fe fe-mail me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> info@samjiapp.com</a></p>
+                                <p class="mb-3"><span><i class="fe fe-phone me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> +91 7510621111</a></p>
+                                <p class="mb-0"><span><i class="fe fe-link me-2 d-inline-block"></i></span><a href="{{ route('index') }}" class="text-default">http://samjiapp.com/</a></p>
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="text-start d-flex justify-content-center gap-3 flex-wrap"> <a href="javascript:void(0);" class="btn btn-success waves-effect waves-light my-1"><i class="fe fe-mail"></i> Chat</a> <a href="javascript:void(0);" class="btn btn-primary waves-effect waves-light my-1" data-bs-toggle="modal" data-bs-target="#contact"><i class="fe fe-user"></i> Contact Me</a> <a href="javascript:void(0);" class="btn btn-info waves-effect waves-light my-1"><i class="fe fe-share-2"></i> Share</a> </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Search Partner</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" id="text3" placeholder="Location">
+                            </div>
+                            <div class="form-group mb-3">
+                                <select class="form-control" data-trigger>
+                                    @forelse($extras->where('name', 'occupation') as $key => $ex)
+                                    <option value="{{ $ex->id }}">{{ $ex->value }}</option>
+                                    @empty
+                                    @endforelse
+                                </select>
+                            </div>
+                            <div class="">
+                                <a href="javascript:void(0);" class="btn btn-primary btn-block waves-effect waves-light">Search</a>
+                            </div>
                         </div>
                     </div>
                     <div class="card mb-0">
@@ -177,7 +156,7 @@
                             <div class="support-service bg-primary-transparent rounded mt-3 d-flex gap-3 flex-wrap">
                                 <i class="fe fe-phone bg-primary text-secondary fs-16"></i>
                                 <div>
-                                    <h6 class="text-default fw-semibold fs-16 mt-1 mb-1">+68 872-627-9735</h6>
+                                    <h6 class="text-default fw-semibold fs-16 mt-1 mb-1"><a href="tel:+917510621111"> +91 7510621111</a></h6>
                                     <p class="text-default mb-0 fs-12 text-uppercase">Free Support!</p>
                                 </div>
                             </div>

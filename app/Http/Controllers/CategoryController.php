@@ -48,7 +48,8 @@ class CategoryController extends Controller
     function matrimonialDetail(string $id, string $slug)
     {
         $ad = Ad::findOrFail($id);
-        return view('category.matrimonial_detail', compact('ad'));
+        $extras = Extra::where('category_id', 3)->get();
+        return view('category.matrimonial_detail', compact('ad', 'extras'));
     }
 
     function vehicle(Request $request)
