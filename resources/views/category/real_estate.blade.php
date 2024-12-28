@@ -146,7 +146,7 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <div class="item-tabcard-img">
-                                                    <div class="item-tabcard-imgs"> <a aria-label="anchor" href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}"></a> <img src="{{ $item->images?->first()?->image_url ? url($item->images?->first()?->image_url) : '' }}" alt="img" class="cover-image rounded-1 w-100"> </div>
+                                                    <div class="item-tabcard-imgs"> <a aria-label="anchor" href="{{ route('category.real.estate.detail', ['id' => $item->id, 'slug' => $item->slug]) }}"></a> <img src="{{ $item->images?->first()?->image_url ? asset($item->images?->first()?->image_url) : '' }}" alt="img" class="cover-image rounded-1 w-100"> </div>
                                                     <div class="item-tabcard-icons"> <a aria-label="anchor" href="javascript:void(0);" class="item-tabcard-icons1 wishlist" data-bs-toggle="tooltip" data-bs-title="Add to Wishlist" data-bs-placement="top"> <i class="fe fe-heart"></i> </a> </div>
                                                     <div class="item-tabcard-icons2"> <a aria-label="anchor" href="javascript:void(0);" class="item-tabcard-icons1"> New</a> </div>
                                                 </div>
