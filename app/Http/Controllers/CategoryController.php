@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use App\Models\Category;
+use App\Models\Extra;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 
@@ -32,7 +33,8 @@ class CategoryController extends Controller
     function realEstateDetail(string $id, string $slug)
     {
         $ad = Ad::findOrFail($id);
-        return view('category.real_estate_detail', compact('ad'));
+        $extras = Extra::where('category_id', 2)->get();
+        return view('category.real_estate_detail', compact('ad', 'extras'));
     }
 
     function matrimonial(Request $request)

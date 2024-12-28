@@ -2,3 +2,7 @@
 .cat-img i{
     font-size: xxx-large !important;
   }
+
+  .fe-heart:before{
+    line-height: 2.2 !important;
+  }

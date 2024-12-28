@@ -23,6 +23,8 @@
     <link href="{{ asset('/assets/libs/@simonwep/pickr/themes/classic.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/assets/libs/@simonwep/pickr/themes/monolith.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/assets/libs/@simonwep/pickr/themes/nano.min.css') }}" rel="stylesheet">
+    <!-- Nouislider CSS-->
+    <link rel="stylesheet" href="{{ asset('/assets/libs/nouislider/nouislider.min.css') }}">
     <!-- ICONS CSS -->
     <link href="{{ asset('/assets/css/icons.css') }}" rel="stylesheet">
     <!-- Choices Css -->
@@ -189,7 +191,8 @@
         z27r("28HOT5g+,wLHN)zybk5.V");
         -->
     </script>
-
+    <!-- noUiSlider JS -->
+    <script src="{{ asset('/assets/libs/nouislider/nouislider.min.js') }}"></script>
     <script src="{{ asset('/assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
 
     <script src="{{ asset('/assets/libs/rater-js/index.js') }}"></script>
