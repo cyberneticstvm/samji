@@ -110,7 +110,7 @@
                                     <a href="userprofile.html" class="text-dark">
                                         <h4 class="mt-3 mb-1 fw-semibold fs-18">{{ $ad->user->name }}</h4>
                                     </a>
-                                    <p class="mb-1">Samji Property Agent</p>
+                                    <p class="mb-1">Samji Wedding Agent</p>
                                     <span class="text-muted">Member Since {{ $ad->user->created_at->format('M Y') }}</span>
                                     <div> <a href="ad-list.html" class="btn btn-primary waves-effect waves-light mt-3">See All Properties</a> </div>
                                 </div>
