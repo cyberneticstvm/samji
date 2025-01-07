@@ -66,7 +66,7 @@
                             @endauth
                         </ul>
                         <div class="d-xl-none d-flex gap-2">
-                            <a class="btn btn-primary btn-icon" href="ad-posts.html"><i class="fe fe-plus-circle"></i></a>
+                            <a class="btn btn-primary btn-icon" href="javascript:void(0)"><i class="fe fe-plus-circle" data-bs-toggle="modal" data-bs-target="#categoryModal"></i></a>
                             @auth
                             <a class="btn btn-secondary btn-icon" href="{{ route('logout') }}"><i class="fe fe-log-out"></i></a>
                             @else

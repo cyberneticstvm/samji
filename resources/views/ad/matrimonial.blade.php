@@ -13,7 +13,7 @@
         <use xlink:href="#svg-shape"></use>
     </svg> <!--Shape End-->
 </section>
-<section class="section">
+<section class="section bg-white">
     <div class="container">
         <div class="heading-section">
             <div class="heading-title">Post your <span class="text-primary">Profile</span></div>
