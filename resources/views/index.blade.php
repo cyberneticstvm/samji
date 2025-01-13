@@ -43,8 +43,11 @@
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5 col-md-12 text-lg-end my-auto text-center my-auto">
-                <div class="main-banner-1  my-auto ">
-                    <img src="{{ asset('/assets/images/banners/1.png') }}" class="main-banner-png" alt="img">
+                <div class="my-auto">
+                    <!--<img src="{{ asset('/assets/images/banners/1.png') }}" class="main-banner-png" alt="img">-->
+                    <iframe title="" class="w-100" height="400"
+                        src="https://www.youtube.com/embed/SBMlfhq5-Hg"
+                        allow="accelerometer; autoplay;" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
