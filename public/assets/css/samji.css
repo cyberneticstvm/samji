@@ -6,3 +6,7 @@
   .fe-heart:before{
     line-height: 2.2 !important;
   }
+
+.app-sidebar .slide.has-sub .slide-menu.child1{
+  background-color: rgb(135, 20, 99) !important;
+}
