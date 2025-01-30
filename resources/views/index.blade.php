@@ -92,20 +92,11 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between flex-wrap gap-2">
                         <h5 class="card-title my-auto">
-                            Advertise Here!
+                            Astrix MediClinic
                         </h5>
                     </div>
                     <div class="card-body">
-                        <blockquote class="blockquote custom-blockquote secondary mb-0 text-center">
-                            <h6>The future belongs to those who believe in the beauty of their dreams..</h6>
-                            <footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0">Someone famous as <cite title="Source Title">-Eleanor Roosevelt</cite></footer>
-                            <span class="quote-icon"><i class="ri-information-line"></i></span>
-                        </blockquote>
-                    </div>
-                    <div class="card-footer d-none border-top-0">
-                        <!-- Prism Code -->
-                        <pre class="language-html"><code class="language-html">&lt;blockquote class="blockquote custom-blockquote secondary mb-0 text-center"&gt;&lt;h6&gt;The future belongs to those who believe in the beauty of their dreams..&lt;/h6&gt;&lt;footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0"&gt;Someone famous as &lt;cite title="Source Title"&gt;-Eleanor Roosevelt&lt;/cite&gt;&lt;/footer&gt;&lt;span class="quote-icon"&gt;&lt;i class="ri-information-line"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/blockquote&gt;</code></pre>
-                        <!-- Prism Code -->
+                        <div class="w-100"><img src="/storage/ads/1.jpeg" width="100%" /></div>
                     </div>
                 </div>
             </div>
@@ -113,20 +104,11 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between flex-wrap gap-2">
                         <h5 class="card-title my-auto">
-                            Advertise Here!
+                            Agasthya Hill Ayurvedic Hospital
                         </h5>
                     </div>
                     <div class="card-body">
-                        <blockquote class="blockquote custom-blockquote secondary mb-0 text-center">
-                            <h6>The future belongs to those who believe in the beauty of their dreams..</h6>
-                            <footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0">Someone famous as <cite title="Source Title">-Eleanor Roosevelt</cite></footer>
-                            <span class="quote-icon"><i class="ri-information-line"></i></span>
-                        </blockquote>
-                    </div>
-                    <div class="card-footer d-none border-top-0">
-                        <!-- Prism Code -->
-                        <pre class="language-html"><code class="language-html">&lt;blockquote class="blockquote custom-blockquote secondary mb-0 text-center"&gt;&lt;h6&gt;The future belongs to those who believe in the beauty of their dreams..&lt;/h6&gt;&lt;footer class="blockquote-footer mt-3 fs-14 text-muted op-7 mb-0"&gt;Someone famous as &lt;cite title="Source Title"&gt;-Eleanor Roosevelt&lt;/cite&gt;&lt;/footer&gt;&lt;span class="quote-icon"&gt;&lt;i class="ri-information-line"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/blockquote&gt;</code></pre>
-                        <!-- Prism Code -->
+                        <div class="w-100"><img src="/storage/ads/2.jpeg" width="100%" /></div>
                     </div>
                 </div>
             </div>
