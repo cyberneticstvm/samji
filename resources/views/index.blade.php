@@ -96,7 +96,7 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <div class="w-100"><img src="{{ Storage::disk('public')->path('ads/1.jpeg') }}" width="100%" /></div>
+                        <div class="w-100"><img src="{{ asset('/storage/ads/1.jpeg') }}" width="100%" /></div>
                     </div>
                 </div>
             </div>
