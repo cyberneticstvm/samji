@@ -96,7 +96,7 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <div class="w-100"><img src="/storage/ads/1.jpeg" width="100%" /></div>
+                        <div class="w-100"><img src="{{ url('/storage/ads/1.jpeg') }}" width="100%" /></div>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <div class="w-100"><img src="/storage/ads/2.jpeg" width="100%" /></div>
+                        <div class="w-100"><img src="{{ url('/storage/ads/2.jpeg') }}" width="100%" /></div>
                     </div>
                 </div>
             </div>
