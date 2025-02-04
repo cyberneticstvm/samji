@@ -1,8 +1,9 @@
 @extends('base')
 @section("content")
-<div class="body d-flex">
+<section class="section position-relative bg-white">
     <div class="container">
-        <div class="row g-4">
+        <!-- Start:: row-1 -->
+        <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 @if(session()->has('error'))
                 <div class="alert alert-danger">
@@ -13,5 +14,5 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 @endsection
