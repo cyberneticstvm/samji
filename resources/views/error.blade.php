@@ -10,7 +10,7 @@
                     {{ session()->get('error') }}
                 </div>
                 @endif
-                {{ $exception->getMessage() }}
+                <p class="text-danger">{{ $exception->getMessage() }}</p>
             </div>
         </div>
     </div>
