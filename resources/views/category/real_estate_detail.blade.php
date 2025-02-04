@@ -78,7 +78,7 @@
                                 <a href="javascript:void(0);" class="text-dark">
                                     <h4 class="fw-semibold my-auto">₹{{ number_format($ad->price, 2), ',' }}</h4>
                                 </a>
-                                <a href="javascript:void(0);" class="icons">₹{{ number_format($ad->price/$ad->buildup_area, 2) }}/sq ft</a>
+                                <a href="javascript:void(0);" class="icons">₹{{ ($ad->price > 0 && $ad->buildup_area > 0) ? number_format($ad->price/$ad->buildup_area, 2) : 0.00 }}/sq ft</a>
                             </div>
                         </div>
                     </div>
