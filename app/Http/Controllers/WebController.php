@@ -44,8 +44,8 @@ class WebController extends Controller
         $request->validate([
             'name' => 'required',
             'role' => 'required',
-            'email' => 'required|email',
-            'mobile' => 'required|numeric|digits:10',
+            'email' => 'required|email|unique:users,email',
+            'mobile' => 'required|numeric|digits:10|unique:users,mobile',
             'password' => 'required|confirmed|min:6',
             'password_confirmation' => 'required',
             'terms' => 'accepted',
@@ -73,7 +73,7 @@ class WebController extends Controller
             'password' => 'required',
         ]);
         try {
-            $credentials = $request->only('email', 'password', 'remember');
+            $credentials = $request->only('email', 'password');
             if (Auth::attempt($credentials)) {
                 return redirect()->route('index')
                     ->with("success", 'User logged in successfully');
