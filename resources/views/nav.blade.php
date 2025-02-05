@@ -40,7 +40,7 @@
                                         <li class="slide"> <a href="{{ route('econtact') }}" class="side-menu__item"> <span class="side-menu__label">Emergency Contacts</span> </a> </li>
                                         <li class="slide"> <a href="{{ route('contact') }}" class="side-menu__item"> <span class="side-menu__label">Contact Us</span> </a> </li>
                                         @auth
-                                        <li class="slide has-sub"> <a href="javascript:void(0);" class="side-menu__item"> <span class="side-menu__label">My Profile </span> <i class="fe fe-chevron-down side-menu__angle"></i> </a>
+                                        <li class="slide has-sub"> <a href="javascript:void(0);" class="side-menu__item"> <span class="side-menu__label">{{ Auth::user()->name }}'s Profile </span> <i class="fe fe-chevron-down side-menu__angle"></i> </a>
                                             <ul class="slide-menu child1 without-icon active" data-popper-placement="bottom" style="position: relative; left: 0px; top: 0px; margin: 0px; box-sizing: border-box; transform: translate(900px, 56px); display: none;">
                                                 <li class="slide"> <a href="{{ route('dashboard') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Dashboard</span> </a> </li>
                                                 <li class="slide"> <a href="{{ route('listing') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Listings</span> </a> </li>
@@ -66,7 +66,7 @@
                             @endauth
                         </ul>
                         <div class="d-xl-none d-flex gap-2">
-                            <a class="btn btn-primary btn-icon" href="javascript:void(0)"><i class="fe fe-plus-circle" data-bs-toggle="modal" data-bs-target="#categoryModal"></i></a>
+                            <a class="btn btn-secondary" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#categoryModal">Post</a>
                             @auth
                             <a class="btn btn-secondary btn-icon" href="{{ route('logout') }}"><i class="fe fe-log-out"></i></a>
                             @else
