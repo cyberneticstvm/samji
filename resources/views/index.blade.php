@@ -11,7 +11,7 @@
                     <p class="mb-3 fs-13 text-uppercase text-secondary fw-semibold section-bg-title text-start ms-3">
                         Business Towards Success
                     </p>
-                    <h1 class="mb-3 fw-semibold text-fixed-white">Unveiling the India's Largest <span class="text-secondary">Business Directory</span> for Global Entrepreneurs</h1>
+                    <h1 class="mb-3 fw-semibold text-fixed-white">Unveiling India's Largest <span class="text-secondary">Business Directory</span> for Global Entrepreneurs</h1>
                     <p class="mb-5 sub-text text-fixed-white">Are you looking for a comprehensive classifieds business directory that offers listings for real estate, matrimonials, jobs, education, and more </p>
                 </div>
                 <div class="form d-md-flex  bg-white w-100 rounded-1 shadow-primary-sm banner-input-group text-start">
