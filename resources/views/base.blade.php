@@ -186,11 +186,9 @@
 
     <script src="{{ asset('/assets/libs/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('/assets/js/swiper.js') }}"></script>
-    <script type="text/javascript">
-        <!--
+    <!--<script type="text/javascript">
         z27r("28HOT5g+,wLHN)zybk5.V");
-        -->
-    </script>
+    </script>-->
     <!-- noUiSlider JS -->
     <script src="{{ asset('/assets/libs/nouislider/nouislider.min.js') }}"></script>
     <script src="{{ asset('/assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>

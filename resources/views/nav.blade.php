@@ -45,6 +45,9 @@
                                                 <li class="slide"> <a href="{{ route('dashboard') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Dashboard</span> </a> </li>
                                                 <li class="slide"> <a href="{{ route('listing') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Listings</span> </a> </li>
                                                 <li class="slide"> <a href="{{ route('profile') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Profile</span> </a> </li>
+                                                @if(Auth::user()->role == 'admin')
+                                                <li class="slide"> <a href="{{ route('caste.register') }}" class="side-menu__item"> <i class="bi bi-star me-2 fs-10p menu-smalll-icon"></i> <span class="">Manage Caste</span> </a> </li>
+                                                @endif
                                             </ul>
                                         </li>
                                         @endauth

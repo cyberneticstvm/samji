@@ -1,0 +1,66 @@
+@extends('base')
+@section('content')
+<section class="section banner-2 cover-image main-banner" data-bs-image-src="{{ asset('/assets/images/banners/24.jpg') }}" style="background: url(&quot;{{ asset('/assets/images/banners/24.jpg') }}&quot;) center center;">
+    <div class="container">
+        <div class="text-center text-fixed-white">
+            <h1 class="text-fixed-white">Caste Register</h1>
+        </div>
+    </div> <!-- Shape Start --> <svg style="display:none;">
+        <symbol id="svg-shape" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="var(--custom-white)" d="M0,96L1440,320L1440,320L0,320Z"></path>
+        </symbol>
+    </svg> <svg class="position-absolute w-100 svg-shape">
+        <use xlink:href="#svg-shape"></use>
+    </svg> <!--Shape End-->
+</section>
+<section class="section position-relative bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                        <div class="">
+                            <h5 class="card-title mb-0"> All Castes </h5>
+                        </div>
+                        <div class=""><a href="{{ route('caste.create') }}" class="btn btn-primary">Add New</a></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-stripped" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>SL No.</th>
+                                        <th>Religion</th>
+                                        <th>Caste</th>
+                                        <th>Subcaste</th>
+                                        <th>Deleted</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse($castes as $key => $caste)
+                                    <tr>
+                                        <td>{{ $key + 1 }}</td>
+                                        <td>{{ $caste->religion($caste->id) }}</td>
+                                        <td>{{ $caste->caste?->name }}</td>
+                                        <td>{{ $caste->name }}</td>
+                                        <td>{!! $caste->cancelled() !!}</td>
+                                        <td>
+                                            <div class="d-flex gap-2 align-items-center"><a aria-label="anchor" href="{{ route('caste.edit', encrypt($caste->id)) }}" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit" class="btn  btn-icon btn-sm btn-secondary rounded-circle"><i class="ti ti-pencil"></i></a>
+                                                <a aria-label="anchor" href="{{ route('caste.delete', encrypt($caste->id)) }}" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete" class="btn  btn-icon btn-sm  btn-danger rounded-circle dlt"><i class="ti ti-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    @empty
+                                    @endforelse
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection('content')

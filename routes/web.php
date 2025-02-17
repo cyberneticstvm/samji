@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CasteController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WebController;
 use App\Http\Middleware\UserRole;
@@ -70,6 +71,14 @@ Route::middleware(['web', 'auth'])->group(function () {
             Route::get('/ad/delete/{id}', 'deleteAd')->name('ad.delete');
             Route::get('/ad/status/{id}', 'adStatus')->name('ad.status');
             Route::post('/ad/status/{id}', 'adStatusUpdate')->name('ad.status.update');
+        });
+        Route::controller(CasteController::class)->group(function () {
+            Route::get('/caste', 'index')->name('caste.register');
+            Route::get('/caste/create', 'create')->name('caste.create');
+            Route::post('/caste/create', 'store')->name('caste.save');
+            Route::get('/caste/edit/{id}', 'edit')->name('caste.edit');
+            Route::post('/caste/edit/{id}', 'update')->name('caste.update');
+            Route::get('/caste/delete/{id}', 'destroy')->name('caste.delete');
         });
     });
 });
