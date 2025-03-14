@@ -123,6 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    'gpak' => env('GOOGLE_PLACES_API_KEY', 'AIzaSyBrGOT5Pj63rPRg2lgJ4xjkS35PQqj_iKw'),
+    'gpak' => env('GOOGLE_PLACES_API_KEY', ''),
 
 ];
