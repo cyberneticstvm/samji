@@ -206,7 +206,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"></script>
 
     <script async
-        src="https://maps.googleapis.com/maps/api/js?key={{config('app.gpak')}}&libraries=places">
+        src="https://maps.googleapis.com/maps/api/js?key={{config('app.gpak')}}&loading=async&libraries=places">
     </script>
 
     <script src="{{ asset('/assets/js/script.js') }}"></script>
