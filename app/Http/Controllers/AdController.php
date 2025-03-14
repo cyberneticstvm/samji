@@ -193,6 +193,84 @@ class AdController extends Controller
         return redirect()->route('index')->with("success", "Profile updated successfully");
     }
 
+    function viewFormShopping(Request $request)
+    {
+        $page_title = 'Post Free Ad';
+        $category = Category::where('ad_post_route', $request->route()->getName())->first();
+        $extras = Extra::where('category_id', $category->id)->get();
+        return view('ad.shopping', compact('page_title', 'category', 'extras'));
+    }
+
+    function saveAdShopping(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'category' => 'required',
+            'contact_number_1' => 'required',
+            'email' => 'required',
+            'choose_location' => 'required',
+            'description' => 'required',
+        ]);
+        try {
+            $input = $request->except(array('images', 'name', 'choose_location', 'location_lat', 'location_lng'));
+            $input['registration_id'] = uniqueRegistrationId();
+            $input['title'] = $request->name;
+            $input['slug'] = $input['registration_id'];
+            $input['created_by'] = $request->user()->id;
+            $input['updated_by'] = $request->user()->id;
+            $input['location'] = $request->choose_location;
+            $input['lat'] = $request->location_lat;
+            $input['lng'] = $request->location_lng;
+            $input['status'] = 'pending';
+            $ad = Ad::create($input);
+            $path = 'shopping-files/' . $ad->category_id . '/' . $ad->id;
+            if ($request->file('images')):
+                $type = 'img';
+                $images = $request->file('images');
+                foreach ($images as $key => $item):
+                    $this->saveFiles($ad, $item, $path, $type, $col = null);
+                endforeach;
+            endif;
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
+        }
+        return redirect()->route('index')->with("success", "Business details added successfully");
+    }
+
+    function updateShopping(Request $request, string $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'category' => 'required',
+            'contact_number_1' => 'required',
+            'email' => 'required',
+            'choose_location' => 'required',
+            'description' => 'required',
+        ]);
+        try {
+            $input = $request->except(array('images', 'name', 'choose_location', 'location_lat', 'location_lng'));
+            $input['title'] = $request->name;
+            $input['updated_by'] = $request->user()->id;
+            $input['location'] = $request->choose_location;
+            $input['lat'] = $request->location_lat;
+            $input['lng'] = $request->location_lng;
+            $input['status'] = 'pending';
+            $ad = Ad::FindOrFail($id);
+            $ad->update($input);
+            $path = 'shopping-files/' . $ad->category_id . '/' . $ad->id;
+            if ($request->file('images')):
+                $type = 'img';
+                $images = $request->file('images');
+                foreach ($images as $key => $item):
+                    $this->saveFiles($ad, $item, $path, $type, $col = null);
+                endforeach;
+            endif;
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
+        }
+        return redirect()->route('index')->with("success", "Business details updated successfully");
+    }
+
     function editAd(string $id)
     {
         $ad = Ad::findOrFail(decrypt($id));

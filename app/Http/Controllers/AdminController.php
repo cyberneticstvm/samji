@@ -18,7 +18,7 @@ class AdminController extends Controller
             return $q->where('ads.created_by', $request->user()->id);
         })->when(in_array($request->user()->role, array('agent')), function ($q) use ($request) {
             return $q->where('ads.created_by', $request->user()->id)->orWhere('ads.created_by', $request->user()->id);
-        })->select('ads.*')->withTrashed()->get();
+        })->select('ads.*')->withTrashed()->latest()->get();
         return view('admin.listing', compact('listings'));
     }
 

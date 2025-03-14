@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('route')->nullable();
             $table->string('ad_edit_view')->nullable();
             $table->string('ad_post_route')->nullable();
+            $table->smallInteger('order_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

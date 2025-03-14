@@ -40,6 +40,7 @@ Route::middleware(['web'])->group(function () {
     Route::prefix('ads')->controller(CategoryController::class)->group(function () {
         Route::get('real-estate/{id}/{slug}', 'realEstateDetail')->name('category.real.estate.detail');
         Route::get('matrimonial/{id}/{slug}', 'matrimonialDetail')->name('category.matrimonial.detail');
+        Route::get('shopping/{id}/{slug}', 'shoppingDetail')->name('category.shopping.detail');
     });
 });
 
@@ -53,11 +54,14 @@ Route::middleware(['web', 'auth'])->group(function () {
             Route::post('/realestate', 'saveAdRealEstate')->name('post.ad.real.estate.save');
             Route::get('/matrimonial', 'viewFormMatrimonial')->name('post.ad.matrimonial');
             Route::post('/matrimonial', 'saveAdMatrimonial')->name('post.ad.matrimonial.save');
+            Route::get('/shopping', 'viewFormShopping')->name('post.ad.shopping');
+            Route::post('/shopping', 'saveAdShopping')->name('post.ad.shopping.save');
 
             Route::get('/edit/{id}', 'editAd')->name('ad.edit');
 
             Route::post('/realestate/update/{id}', 'updateAdRealEstate')->name('post.ad.real.estate.update');
             Route::post('/matrimonial/update/{id}', 'updateMatrimonial')->name('post.ad.matrimonial.update');
+            Route::post('/shopping/update/{id}', 'updateShopping')->name('post.ad.shopping.update');
         });
         Route::prefix(Auth::user()->role ?? 'user')->controller(AdminController::class)->group(function () {
             Route::get('/dashboard', 'dashboard')->name('dashboard');

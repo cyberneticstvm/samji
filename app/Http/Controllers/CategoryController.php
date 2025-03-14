@@ -84,7 +84,15 @@ class CategoryController extends Controller
     {
         $page_title = 'Samji Web Portal';
         $category = Category::where('route', $request->route()->getName())->first();
-        return view('category.shopping', compact('page_title', 'category'));
+        $items = $this->getListing($category->id);
+        return view('category.shopping', compact('page_title', 'category', 'items'));
+    }
+
+    function shoppingDetail(string $id, string $slug)
+    {
+        $ad = Ad::findOrFail($id);
+        $extras = Extra::where('category_id', 8)->get();
+        return view('category.shopping_detail', compact('ad', 'extras'));
     }
 
     function professional(Request $request)

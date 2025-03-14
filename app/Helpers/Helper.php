@@ -5,7 +5,7 @@ use App\Models\Category;
 
 function categories()
 {
-    return Category::all();
+    return Category::orderBy('order_by')->get();
 }
 
 function uniqueRegistrationId()

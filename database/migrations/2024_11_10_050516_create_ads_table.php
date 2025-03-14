@@ -56,6 +56,8 @@ return new class extends Migration
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->unsignedBigInteger('approved_by')->nullable();
             $table->timestamp('approved_at')->nullable();
+            $table->double('lat')->nullable();
+            $table->double('lng')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('restrict');
             $table->timestamps();
             $table->softDeletes();
