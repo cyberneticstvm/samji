@@ -20,7 +20,7 @@ function initialize() {
     });
 }
 
-function initMap() {
+/*function initMap() {
     navigator.geolocation.getCurrentPosition(
         function(position) {
             var addr = getUserAddressBy(position.coords.latitude, position.coords.longitude);
@@ -44,4 +44,4 @@ function getUserAddressBy(lat, long) {
     };
     xhttp.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key={{config('app.google_api_key')}}", true);
     xhttp.send();
-}
+}*/
