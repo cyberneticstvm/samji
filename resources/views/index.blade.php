@@ -26,8 +26,10 @@
                         @endforelse
                     </select>
                     <div class="form-group mb-sm-0 location w-100">
-                        <input type="text" class="form-control form-control-lg rounded-0" id="sale-location"
+                        <input type="text" class="form-control form-control-lg rounded-0" name="choose_location" id="choose_location"
                             placeholder="Location">
+                        <input type="hidden" name="location_lat" id="location_lat" />
+                        <input type="hidden" name="location_lng" id="location_lng" />
                         <span>
                             <button aria-label="button" type="button" class="btn btn-primary location-gps"
                                 data-bs-toggle="modal" data-bs-target="#locationModal">
