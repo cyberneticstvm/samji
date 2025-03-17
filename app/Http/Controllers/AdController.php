@@ -31,14 +31,16 @@ class AdController extends Controller
             'description' => 'required',
             'type' => 'required',
             'price' => 'required',
-            'state' => 'required',
-            'district' => 'required',
+            'choose_location' => 'required',
         ]);
         try {
-            $input = $request->except(array('images'));
+            $input = $request->except(array('images', 'choose_location', 'location_lat', 'location_lng'));
             $input['slug'] = strtolower(str_replace(' ', '-', $request->title));
             $input['created_by'] = $request->user()->id;
             $input['updated_by'] = $request->user()->id;
+            $input['location'] = $request->choose_location;
+            $input['lat'] = $request->location_lat;
+            $input['lng'] = $request->location_lng;
             $input['status'] = 'pending';
             $ad = Ad::create($input);
             if ($request->file('images')):
@@ -61,13 +63,15 @@ class AdController extends Controller
             'description' => 'required',
             'type' => 'required',
             'price' => 'required',
-            'state' => 'required',
-            'district' => 'required',
+            'choose_location' => 'required',
         ]);
         try {
-            $input = $request->except(array('images'));
+            $input = $request->except(array('images', 'choose_location', 'location_lat', 'location_lng'));
             $input['slug'] = strtolower(str_replace(' ', '-', $request->title));
             $input['updated_by'] = $request->user()->id;
+            $input['location'] = $request->choose_location;
+            $input['lat'] = $request->location_lat;
+            $input['lng'] = $request->location_lng;
             $input['status'] = 'pending';
             $ad = Ad::findOrFail($id);
             $ad->update($input);
@@ -108,17 +112,18 @@ class AdController extends Controller
             'income' => 'required',
             'contact_number_1' => 'required',
             'address' => 'required',
-            'pincode' => 'required',
-            'state' => 'required',
-            'district' => 'required',
+            'choose_location' => 'required',
         ]);
         try {
-            $input = $request->except(array('images', 'name'));
+            $input = $request->except(array('images', 'name', 'choose_location', 'location_lat', 'location_lng'));
             $input['title'] = $request->name;
             $input['registration_id'] = uniqueRegistrationId();
             $input['slug'] = $input['registration_id'];
             $input['created_by'] = $request->user()->id;
             $input['updated_by'] = $request->user()->id;
+            $input['location'] = $request->choose_location;
+            $input['lat'] = $request->location_lat;
+            $input['lng'] = $request->location_lng;
             $input['status'] = 'pending';
             $ad = Ad::create($input);
             $path = 'ad-files/' . $ad->category_id . '/' . $ad->id;
@@ -158,14 +163,15 @@ class AdController extends Controller
             'income' => 'required',
             'contact_number_1' => 'required',
             'address' => 'required',
-            'pincode' => 'required',
-            'state' => 'required',
-            'district' => 'required',
+            'choose_location' => 'required',
         ]);
         try {
-            $input = $request->except(array('images', 'name'));
+            $input = $request->except(array('images', 'name', 'choose_location', 'location_lat', 'location_lng'));
             $input['title'] = $request->name;
             $input['updated_by'] = $request->user()->id;
+            $input['location'] = $request->choose_location;
+            $input['lat'] = $request->location_lat;
+            $input['lng'] = $request->location_lng;
             $input['status'] = 'pending';
             $ad = Ad::findOrFail($id);
             $ad->update($input);

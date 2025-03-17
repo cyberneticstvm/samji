@@ -102,33 +102,14 @@
                                 <label class="mb-2 form-label">Price (₹)</label>
                                 {{ html()->number('price', old('price'), $min='1', '', $step=1)->class("form-control ms-0")->placeholder("0.00") }}
                             </div>
-                            <div class="col-sm-4 mb-3">
-                                <label class="mb-2 form-label">Location</label>
-                                {{ html()->text('location', old('location'))->class("form-control ms-0")->maxlength('150')->placeholder("Location") }}
-                                @error('location')
-                                <small class="text-danger">{{ $errors->first('location') }}</small>
+                            <div class="col-xl-6 mb-3">
+                                <label class="mb-2 form-label">Address <span class="text-danger ms-1">*</span></label> <span class="text-primary small">(Pick an address from the list)</span>
+                                {{ html()->text('choose_location', old('choose_location'))->class("form-control ms-0")->attribute('id', 'choose_location')->placeholder("Address") }}
+                                @error('choose_location')
+                                <small class="text-danger">{{ $errors->first('choose_location') }}</small>
                                 @enderror
-                            </div>
-                            <div class="col-sm-6 mb-3">
-                                <label class="mb-2 form-label">Address</label>
-                                {{ html()->text('address', old('address'))->class("form-control ms-0")->maxlength('250')->placeholder("Address") }}
-                                @error('address')
-                                <small class="text-danger">{{ $errors->first('address') }}</small>
-                                @enderror
-                            </div>
-                            <div class="col-sm-6 mb-3">
-                                <label class="mb-2 form-label">State <span class="text-danger ms-1">*</span></label>
-                                {{ html()->select('state', $states->pluck('name', 'id'), old('state'))->class("form-control ms-0 select2")->placeholder("Select") }}
-                                @error('state')
-                                <small class="text-danger">{{ $errors->first('state') }}</small>
-                                @enderror
-                            </div>
-                            <div class="col-sm-6 mb-3">
-                                <label class="mb-2 form-label">District <span class="text-danger ms-1">*</span></label>
-                                {{ html()->select('district', $districts->pluck('name', 'id'), old('district'))->class("form-control ms-0 select2")->placeholder("Select") }}
-                                @error('district')
-                                <small class="text-danger">{{ $errors->first('district') }}</small>
-                                @enderror
+                                <input type="hidden" name="location_lat" id="location_lat" value="{{ old('location_lat') }}" />
+                                <input type="hidden" name="location_lng" id="location_lng" value="{{ old('location_lng') }}" />
                             </div>
                             <div class="row mt-3 mb-3">
                                 <div class="col-xl-12 mb-3">

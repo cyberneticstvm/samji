@@ -95,33 +95,21 @@
                                 <label class="mb-2 form-label">Contact Number 2</label>
                                 {{ html()->text('contact_number_2', $ad->contact_number_2)->class("form-control ms-0")->maxlength(10)->placeholder("xxxxxxxxxx") }}
                             </div>
-                            <div class="col-sm-6 mb-3">
+                            <div class="col-sm-4 mb-3">
                                 <label class="mb-2 form-label">Address <span class="text-danger ms-1">*</span></label>
                                 {{ html()->text('address', $ad->address)->class("form-control ms-0")->placeholder("Address") }}
                                 @error('address')
                                 <small class="text-danger">{{ $errors->first('address') }}</small>
                                 @enderror
                             </div>
-                            <div class="col-xl-2 mb-3">
-                                <label class="mb-2 form-label">Pincode <span class="text-danger ms-1">*</span></label>
-                                {{ html()->text('pincode', $ad->pincode)->class("form-control ms-0")->maxlength(6)->placeholder("xxxxxx") }}
-                                @error('pincode')
-                                <small class="text-danger">{{ $errors->first('pincode') }}</small>
+                            <div class="col-xl-4 mb-3">
+                                <label class="mb-2 form-label">Location <span class="text-danger ms-1">*</span></label> <span class="text-primary small">(Pick a location from the list)</span>
+                                {{ html()->text('choose_location', $ad->location)->class("form-control ms-0")->attribute('id', 'choose_location')->placeholder("Location") }}
+                                @error('choose_location')
+                                <small class="text-danger">{{ $errors->first('choose_location') }}</small>
                                 @enderror
-                            </div>
-                            <div class="col-sm-6 mb-3">
-                                <label class="mb-2 form-label">State <span class="text-danger ms-1">*</span></label>
-                                {{ html()->select('state', $states->pluck('name', 'id'), $ad->state)->class("form-control ms-0 select2")->placeholder("Select") }}
-                                @error('state')
-                                <small class="text-danger">{{ $errors->first('state') }}</small>
-                                @enderror
-                            </div>
-                            <div class="col-sm-6 mb-3">
-                                <label class="mb-2 form-label">District <span class="text-danger ms-1">*</span></label>
-                                {{ html()->select('district', $districts->pluck('name', 'id'), $ad->district)->class("form-control ms-0 select2")->placeholder("Select") }}
-                                @error('district')
-                                <small class="text-danger">{{ $errors->first('district') }}</small>
-                                @enderror
+                                <input type="hidden" name="location_lat" id="location_lat" value="{{ $ad->location_lat }}" />
+                                <input type="hidden" name="location_lng" id="location_lng" value="{{ $ad->location_lng }}" />
                             </div>
                             <div class="col-sm-6 mb-3">
                                 <label class="mb-2 form-label">Biodata </label><span class="text-primary small">(Allowed file types are .docx and .pdf)</span>
