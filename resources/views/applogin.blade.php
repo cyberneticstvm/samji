@@ -41,7 +41,7 @@
 </head>
 
 <body class="main-body light-theme">
-    <div class="page">
+    <div class="page bg-white">
         <div class="app-content">
             <section class="section position-relative bg-white">
                 <div class="container">
