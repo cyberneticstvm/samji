@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class WebController extends Controller
 {
+    function appLogin()
+    {
+        $page_title = 'Samji Web Portal';
+        return view('applogin', compact('page_title'));
+    }
     function index()
     {
         $page_title = 'Samji Web Portal';
