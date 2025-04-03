@@ -20,10 +20,9 @@
             <h2>SAMJIAPP PRIVACY POLICY</h2>
         </div>
         <div class="row">
-            <div class="mt-5 mb-5">
+            <div class="">
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-center">Privacy Policy</h3>
                         <p>We have prepared this Privacy Notice to explain how, why, and when we collect data from you when you visit our website www.samjiapp.com</p>
                         <h5>What data we collect and how we use it</h5>
                         <p>We may collect the following categories of information for the purposes explained below.</p>
