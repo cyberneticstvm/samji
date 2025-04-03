@@ -90,7 +90,7 @@
                                 <li> <a href="javascript:void(0)"><i class="fa fa-map-location-dot me-2"></i> SamjiApp, Kowdiar, Thiruvananthapuram</a> </li>
                                 <li> <a href="mailto:info@samjiapp.com"><i class="fa-solid fa-envelope-open-text me-2"></i> info@samjiapp.com</a> </li>
                                 <li> <a href="tel:+917510621111"><i class="fa fa-headset me-2"></i> +91 7510621111</a> </li>
-                                <li> <a href="+917510621111"><i class="fa fa-print me-2"></i> + +91 7510621111</a> </li>
+                                <li> <a href="+917510621111"><i class="fa fa-print me-2"></i> +91 7510621111</a> </li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-12">
