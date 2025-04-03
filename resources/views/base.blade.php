@@ -103,7 +103,7 @@
             </div>
             <div class="text-white p-0 ">
                 <div class="d-flex container p-0 flex-wrap">
-                    <div class="text-start footer-links d-flex flex-wrap justify-content-center"> <a href="javascript:void(0)" class="btn btn-link my-auto">Real Estate</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Matrimonial</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Tours & Travels</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Education</a> </div>
+                    <div class="text-start footer-links d-flex flex-wrap justify-content-center"> <a href="javascript:void(0)" class="btn btn-link my-auto">Real Estate</a> <a href="javascript:void(0)" class="btn btn-link my-auto">Matrimonial</a> <a href="{{ route('privacy.policy') }}" class="btn btn-link my-auto">Privacy Policy</a> </div>
                     <div class="ms-auto">
                         <ul class="payments mb-0 d-flex list-unstyled flex-wrap">
                             <li><a aria-label="anchor" class="payment-icon" href="javascript:void(0);"><i class="fa-brands fa-cc-amex"></i></a></li>

@@ -22,6 +22,8 @@ Route::middleware(['web'])->group(function () {
 
         Route::get('/login', 'viewLogin')->name('login');
         Route::post('/login', 'loginAuthentication')->name('login.auth');
+
+        Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
     });
     Route::prefix('category')->controller(CategoryController::class)->group(function () {
         Route::get('/public-info', 'publicInfo')->name('category.public.info');
@@ -49,6 +51,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::middleware('user-roles:' . serialize(array('user', 'admin', 'agent', 'executive')))->group(function () {
         Route::controller(WebController::class)->group(function () {
             Route::get('/logout', 'logout')->name('logout');
+            Route::get('/delete/my/account', 'deleteMyAccount')->name('delete.my.account');
         });
         Route::prefix('post/ad')->controller(AdController::class)->group(function () {
             Route::get('/realestate', 'viewFormRealEstate')->name('post.ad.real.estate');

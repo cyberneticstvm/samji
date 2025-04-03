@@ -16,6 +16,11 @@ class WebController extends Controller
         $page_title = 'Samji Web Portal';
         return view('applogin', compact('page_title'));
     }
+    function privacyPolicy()
+    {
+        $page_title = 'Samji Privacy Policy';
+        return view('privacy-policy', compact('page_title'));
+    }
     function index()
     {
         $page_title = 'Samji Web Portal';
@@ -87,6 +92,15 @@ class WebController extends Controller
         } catch (Exception $e) {
             return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
         }
+    }
+
+    public function deleteMyAccount(Request $request)
+    {
+        User::findOrFail(Auth::user()->id)->delete();
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login')->with("success", "User account deleted successfully");
     }
 
     public function logout(Request $request): RedirectResponse
