@@ -107,12 +107,12 @@ class WebController extends Controller
         $request->validate([
             'email' => 'required|email',
         ]);
-        //try {
-        $user = User::where('email', $request->email)->firstOrFail();
-        Mail::to($request->email)->send(new PasswordResetEmail($user));
-        //} catch (Exception $e) {
-        //return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
-        //}
+        try {
+            $user = User::where('email', $request->email)->firstOrFail();
+            Mail::to($request->email)->send(new PasswordResetEmail($user));
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
+        }
         return redirect()->back()->with("success", "Password reset link sent successfully");
     }
 
@@ -125,7 +125,17 @@ class WebController extends Controller
 
     function resetPasswordUpdate(Request $request)
     {
-        //
+        $request->validate([
+            'uid' => 'required',
+            'password' => 'required|confirmed|min:6',
+            'password_confirmation' => 'required',
+        ]);
+        try {
+            $user = User::findOrFail(decrypt($request->uid));
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
+        }
+        return redirect()->route('login')->with("success", "Password updated successfully");
     }
 
     public function deleteMyAccount(Request $request)
