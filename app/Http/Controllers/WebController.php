@@ -132,6 +132,9 @@ class WebController extends Controller
         ]);
         try {
             $user = User::findOrFail(decrypt($request->uid));
+            $user->update([
+                'password' => Hash::make($request->password),
+            ]);
         } catch (Exception $e) {
             return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
         }

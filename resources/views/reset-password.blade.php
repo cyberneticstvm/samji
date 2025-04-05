@@ -35,7 +35,7 @@
                             <div class="col-sm-12">
                                 <div class="mb-3">
                                     <div class="mb-3">
-                                        <label class="mb-2 fw-500">Password Confirmation<span class="text-danger ms-1">*</span></label>
+                                        <label class="mb-2 fw-500">Confirm Password<span class="text-danger ms-1">*</span></label>
                                         {{ html()->password('password_confirmation')->class("form-control ms-0")->placeholder("******") }}
                                         @error('password_confirmation')
                                         <small class="text-danger">{{ $errors->first('password_confirmation') }}</small>
