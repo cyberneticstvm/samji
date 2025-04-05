@@ -119,7 +119,8 @@ class WebController extends Controller
     function resetPassword(Request $request)
     {
         $page_title = 'Samji Web Portal - Reset Password';
-        return view('reset-password', compact('page_title'));
+        $user = User::findOrFail(decrypt($request->uid));
+        return view('reset-password', compact('page_title', 'user'));
     }
 
     function resetPasswordUpdate(Request $request)

@@ -11,7 +11,7 @@
     <p>Click <a href="{{ route('reset.password', ['uid' => encrypt($user->id)]) }}">here</a> to reset your account password</p>
 
     Regards,<br />
-    Devi Eye Hospitals.
+    Team Samji App.
 </body>
 
 </html>

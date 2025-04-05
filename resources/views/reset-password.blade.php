@@ -14,10 +14,11 @@
             <div class="heading-title">Reset your <span class="text-primary">Account Password</span></div>
         </div>
         {{ html()->form('POST', route('reset.password.update'))->class('row justify-content-center align-items-center needs-validation')->open() }}
+        <input type="hidden" name="uid" value="{{ encrypt($user->id) }}" />
         <div class="col-xl-4 col-lg-6">
             <div class="card border mb-0">
                 <div class="card-body p-sm-6">
-                    <h4 class="mb-2">Password</h4>
+                    <h4 class="mb-2">Reset Password</h4>
                     <div class="form-horizontal">
                         <div class="row">
                             <div class="col-sm-12">
