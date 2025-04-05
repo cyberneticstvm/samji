@@ -23,6 +23,11 @@ Route::middleware(['web'])->group(function () {
         Route::get('/login', 'viewLogin')->name('login');
         Route::post('/login', 'loginAuthentication')->name('login.auth');
 
+        Route::get('/forgot', 'forgotPassword')->name('forgot.password');
+        Route::post('/forgot', 'forgotPasswordFetch')->name('forgot.password.fetch');
+        Route::get('/reset', 'resetPassword')->name('reset.password');
+        Route::post('/reset', 'resetPasswordUpdate')->name('reset.password.update');
+
         Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
     });
     Route::prefix('category')->controller(CategoryController::class)->group(function () {

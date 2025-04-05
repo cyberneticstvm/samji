@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PasswordResetEmail;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class WebController extends Controller
 {
@@ -92,6 +94,37 @@ class WebController extends Controller
         } catch (Exception $e) {
             return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
         }
+    }
+
+    function forgotPassword()
+    {
+        $page_title = 'Samji Web Portal - Forgot Password';
+        return view('forgot-password', compact('page_title'));
+    }
+
+    function forgotPasswordFetch(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+        //try {
+        $user = User::where('email', $request->email)->firstOrFail();
+        Mail::to($request->email)->send(new PasswordResetEmail($user));
+        //} catch (Exception $e) {
+        //return redirect()->back()->with("error", $e->getMessage())->withInput($request->all());
+        //}
+        return redirect()->back()->with("success", "Password reset link sent successfully");
+    }
+
+    function resetPassword(Request $request)
+    {
+        $page_title = 'Samji Web Portal - Reset Password';
+        return view('reset-password', compact('page_title'));
+    }
+
+    function resetPasswordUpdate(Request $request)
+    {
+        //
     }
 
     public function deleteMyAccount(Request $request)

@@ -46,7 +46,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" name="remember" type="checkbox" value="1" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> Remember me </label>
                                     </div>
-                                    <div class="ms-auto"> <a href="#" class="text-primary ms-1">Forgot Password?</a> </div>
+                                    <div class="ms-auto"> <a href="{{ route('forgot.password') }}" class="text-primary ms-1">Forgot Password?</a> </div>
                                 </div>
                                 <div class="d-grid mb-3">
                                     {{ html()->submit('Login')->class('btn btn-submit btn-primary') }}
