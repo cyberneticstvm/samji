@@ -71,12 +71,12 @@
     <div class="container">
         <!-- Start:: row-1 -->
         <div class="row">
+            <h5 class="text-center">Customer Care Number: +91 9446063521 (Sunday to Friday 8:00 AM - 6:00 PM)</h5>
             <div class="section-title center-block text-center mb-6">
                 <h2>Latest News</h2>
             </div>
             <div class="card bg-primary-transparent01">
                 <div class="card-body">
-                    <p class="text-center">Customer Care Number: +91 9446063521 (Sunday to Friday 8:00 AM - 6:00 PM)</p>
                     <blockquote class="quote mb-0">
                         <marquee behavious="scroll" direction="left">
                             <p class="text-primary">FREE REGISTRATION!!!. <a href="{{ route('index') }}">www.samjiapp.com</a> more than hundred service providers available at one login. Download Samji App from link.</p>
