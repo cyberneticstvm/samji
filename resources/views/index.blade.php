@@ -72,7 +72,7 @@
         <!-- Start:: row-1 -->
         <div class="row">
             <h5 class="text-center">Customer Care Number: +91 9446063521 (Sunday to Friday 8:00 AM - 6:00 PM)</h5>
-            <div class="section-title center-block text-center mb-6">
+            <div class="section-title center-block text-center mb-6 mt-5">
                 <h2>Latest News</h2>
             </div>
             <div class="card bg-primary-transparent01">
