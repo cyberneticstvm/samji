@@ -78,7 +78,7 @@
                 <div class="card-body">
                     <blockquote class="quote mb-0">
                         <marquee behavious="scroll" direction="left">
-                            <p class="text-primary">FREE REGISTRATION!!!. <a href="{{ route('index') }}">www.samjiapp.com</a> more than hundred service providers available at one login. Download Samji App from link. </p>
+                            <p class="text-primary">FREE REGISTRATION!!!. <a href="{{ route('index') }}">www.samjiapp.com</a> more than hundred service providers available at one login. Download Samji App from link. Customer Care Number: +91 9446063521 (Sunday to Friday 8:00 AM - 6:00 PM)</p>
                         </marquee>
                     </blockquote>
                 </div>
