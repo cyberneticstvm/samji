@@ -1,6 +1,44 @@
 $(function(){
     "use strict"
     $("#dataTable").dataTable();
+
+    $(".select2").select2();
+
+    $(document).on("change", ".selChange", function(){
+        let dis = $(this);
+        let typeId = dis.val();
+        let give = dis.data('give');
+        let take = dis.data('take');
+        $.ajax({
+            type: 'GET',
+            data: {"typeId": typeId, "give": give, "take": take},
+            url: '/ajax/get/ddl',
+            success: function (res) {              
+                var xdata = $.map(res.items, function (obj) {
+                    obj.text = obj.name || obj.id;
+                    return obj;
+                });
+                if(take == 'religion'){                    
+                    $('.selReligion').html("<option value=''>Select</option>").select2({
+                        data: xdata,
+                    });                   
+                }                   
+                if(take == 'caste'){
+                    $('.selCaste').html("<option value=''>Select</option>").select2({
+                        data: xdata,
+                    });
+                }
+                if(take == 'subcaste'){
+                    $('.selSubCaste').html("<option value=''>Select</option>").select2({
+                        data: xdata,
+                    });
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        });   
+    });
 });
 
 var options = {

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\CasteController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WebController;
@@ -54,6 +55,9 @@ Route::middleware(['web'])->group(function () {
 
 Route::middleware(['web', 'auth'])->group(function () {
     Route::middleware('user-roles:' . serialize(array('user', 'admin', 'agent', 'executive')))->group(function () {
+        Route::prefix('ajax')->controller(AjaxController::class)->group(function () {
+            Route::get('/get/ddl', 'getDropDown')->name('get.ddl');
+        });
         Route::controller(WebController::class)->group(function () {
             Route::get('/logout', 'logout')->name('logout');
             Route::get('/delete/my/account', 'deleteMyAccount')->name('delete.my.account');

@@ -10,3 +10,15 @@
 .app-sidebar .slide.has-sub .slide-menu.child1{
   background-color: rgb(135, 20, 99) !important;
 }
+
+.select2-selection__rendered {
+    line-height: 35px !important;
+}
+.select2-container .select2-selection--single {
+    height: 37px !important;
+    width: 100% !important;
+    border: 1px solid #e8e9eb !important;
+}
+.select2-selection__arrow {
+    height: 37px !important;
+}

@@ -48,21 +48,21 @@
                             </div>
                             <div class="col-sm-2 mb-3">
                                 <label for="religion" class="form-label mb-2">Religion <span class="text-danger ms-1">*</span></label>
-                                {{ html()->select('religion', $casts->where('type', 'religion')->pluck('name', 'id'), old('religion'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                {{ html()->select('religion', $casts->where('type', 'religion')->pluck('name', 'id'), old('religion'))->class("form-control ms-0 select2 selReligion selChange")->attribute('data-give', 'religion')->attribute('data-take', 'caste')->placeholder("Select") }}
                                 @error('religion')
                                 <small class="text-danger">{{ $errors->first('religion') }}</small>
                                 @enderror
                             </div>
                             <div class="col-sm-2 mb-3">
                                 <label for="caste" class="form-label mb-2">Caste <span class="text-danger ms-1">*</span></label>
-                                {{ html()->select('caste', $casts->where('type', 'caste')->pluck('name', 'id'), old('caste'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                {{ html()->select('caste', null, old('caste'))->class("form-control ms-0 select2 selCaste selChange")->attribute('data-give', 'caste')->attribute('data-take', 'subcaste')->placeholder("Select") }}
                                 @error('caste')
                                 <small class="text-danger">{{ $errors->first('caste') }}</small>
                                 @enderror
                             </div>
                             <div class="col-sm-2 mb-3">
                                 <label for="subcaste" class="form-label mb-2">Subcaste</label>
-                                {{ html()->select('subcaste', $casts->where('type', 'subcaste')->pluck('name', 'id'), old('subcaste'))->class("form-control ms-0 select2")->placeholder("Select") }}
+                                {{ html()->select('subcaste', null, old('subcaste'))->class("form-control ms-0 select2 selSubCaste")->placeholder("Select") }}
                                 @error('subcaste')
                                 <small class="text-danger">{{ $errors->first('subcaste') }}</small>
                                 @enderror
