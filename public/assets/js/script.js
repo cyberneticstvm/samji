@@ -17,12 +17,7 @@ $(function(){
                 var xdata = $.map(res.items, function (obj) {
                     obj.text = obj.name || obj.id;
                     return obj;
-                });
-                if(take == 'religion'){                    
-                    $('.selReligion').html("<option value=''>Select</option>").select2({
-                        data: xdata,
-                    });                   
-                }                   
+                });                  
                 if(take == 'caste'){
                     $('.selCaste').html("<option value=''>Select</option>").select2({
                         data: xdata,
