@@ -32,6 +32,7 @@ class AdController extends Controller
             'type' => 'required',
             'price' => 'required',
             'choose_location' => 'required',
+            'contact_number_1' => 'required',
         ]);
         try {
             $input = $request->except(array('images', 'choose_location', 'location_lat', 'location_lng'));
@@ -64,6 +65,7 @@ class AdController extends Controller
             'type' => 'required',
             'price' => 'required',
             'choose_location' => 'required',
+            'contact_number_1' => 'required',
         ]);
         try {
             $input = $request->except(array('images', 'choose_location', 'location_lat', 'location_lng'));
