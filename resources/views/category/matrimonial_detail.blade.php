@@ -112,7 +112,7 @@
                                     </a>
                                     <p class="mb-1">Samji Wedding Agent</p>
                                     <span class="text-muted">Member Since {{ $ad->user->created_at->format('M Y') }}</span>
-                                    <div> <a href="ad-list.html" class="btn btn-primary waves-effect waves-light mt-3">See All Properties</a> </div>
+                                    <div> <a href="{{ route('category.matrimonial') }}" class="btn btn-primary waves-effect waves-light mt-3">See All Profiles</a> </div>
                                 </div>
                             </div>
                         </div>
