@@ -142,7 +142,7 @@
                                     </a>
                                     <p class="mb-1">Samji Business Agent</p>
                                     <span class="text-muted">Member Since {{ $ad->user->created_at->format('M Y') }}</span>
-                                    <div> <a href="{{ route('category.public.info') }}" class="btn btn-primary waves-effect waves-light mt-3">See All Businesses</a> </div>
+                                    <div> <a href="{{ route('category.shopping') }}" class="btn btn-primary waves-effect waves-light mt-3">See All Businesses</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +189,7 @@
                             <div class="support-service bg-primary-transparent rounded mt-3 d-flex gap-3 flex-wrap">
                                 <i class="fe fe-phone bg-primary text-secondary fs-16"></i>
                                 <div>
-                                    <h6 class="text-default fw-semibold fs-16 mt-1 mb-1"><a href="tel:+917510621111"> +91 7510621111</a></h6>
+                                    <h6 class="text-default fw-semibold fs-16 mt-1 mb-1"><a href="tel:+919446063521"> +91 9446063521</a></h6>
                                     <p class="text-default mb-0 fs-12 text-uppercase">Free Support!</p>
                                 </div>
                             </div>
