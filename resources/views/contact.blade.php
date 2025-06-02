@@ -33,7 +33,7 @@
                                 <div class="fs-18">Contact</div>
                             </div>
                         </div>
-                        <h6 class="fw-semibold2 mt-3 mb-1 fs-16"><a href="tel:+917510621111">+91 7510621111</a></h6>
+                        <h6 class="fw-semibold2 mt-3 mb-1 fs-16"><a href="tel:+919446063521">+91 9446063521</a></h6>
                         <p class="mb-0">Free Support!</p>
                     </div>
                 </div>
