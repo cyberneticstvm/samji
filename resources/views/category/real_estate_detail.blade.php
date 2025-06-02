@@ -142,16 +142,16 @@
                                     </a>
                                     <p class="mb-1">Samji Property Agent</p>
                                     <span class="text-muted">Member Since {{ $ad->user->created_at->format('M Y') }}</span>
-                                    <div> <a href="ad-list.html" class="btn btn-primary waves-effect waves-light mt-3">See All Properties</a> </div>
+                                    <div> <a href="{{ route('category.real.estate') }}" class="btn btn-primary waves-effect waves-light mt-3">See All Properties</a> </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body item-user">
                             <h4 class="mb-3 fs-18">Contact Info</h4>
                             <div>
-                                <p class="mb-3"><span><i class="fe fe-map-pin me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> Kowdiar, Thiruvananthapuram</a></p>
+                                <p class="mb-3"><span><i class="fe fe-map-pin me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> {{ $ad->location }}</a></p>
                                 <p class="mb-3"><span><i class="fe fe-mail me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> info@samjiapp.com</a></p>
-                                <p class="mb-3"><span><i class="fe fe-phone me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> +91 7510621111</a></p>
+                                <p class="mb-3"><span><i class="fe fe-phone me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> {{ $ad->contact_number_1 }}</a></p>
                                 <p class="mb-0"><span><i class="fe fe-link me-2 d-inline-block"></i></span><a href="{{ route('index') }}" class="text-default">http://samjiapp.com/</a></p>
                             </div>
                         </div>
@@ -189,7 +189,7 @@
                             <div class="support-service bg-primary-transparent rounded mt-3 d-flex gap-3 flex-wrap">
                                 <i class="fe fe-phone bg-primary text-secondary fs-16"></i>
                                 <div>
-                                    <h6 class="text-default fw-semibold fs-16 mt-1 mb-1"><a href="tel:+917510621111"> +91 7510621111</a></h6>
+                                    <h6 class="text-default fw-semibold fs-16 mt-1 mb-1"><a href="tel:+919446063521"> +91 9446063521</a></h6>
                                     <p class="text-default mb-0 fs-12 text-uppercase">Free Support!</p>
                                 </div>
                             </div>
