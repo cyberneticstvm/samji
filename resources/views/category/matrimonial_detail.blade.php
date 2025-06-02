@@ -119,9 +119,9 @@
                         <div class="card-body item-user">
                             <h4 class="mb-3 fs-18">Contact Info</h4>
                             <div>
-                                <p class="mb-3"><span><i class="fe fe-map-pin me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> Kowdiar, Thiruvananthapuram</a></p>
+                                <p class="mb-3"><span><i class="fe fe-map-pin me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> {{ $ad->location }}</a></p>
                                 <p class="mb-3"><span><i class="fe fe-mail me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> info@samjiapp.com</a></p>
-                                <p class="mb-3"><span><i class="fe fe-phone me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> +91 7510621111</a></p>
+                                <p class="mb-3"><span><i class="fe fe-phone me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-default"> </a></p>
                                 <p class="mb-0"><span><i class="fe fe-link me-2 d-inline-block"></i></span><a href="{{ route('index') }}" class="text-default">http://samjiapp.com/</a></p>
                             </div>
                         </div>
