@@ -86,8 +86,8 @@
                             <p>Height: {{ $ad->height }} CM</p>
                             <p>Religion: {{ $ad->religionn?->name }}</p>
                             <p>Caste: {{ $ad->castee?->name }}</p>
-                            <p>Qualification: {{ $ad->typeDetail?->value }}</p>
-                            <p>Occupation: {{ $ad->typeDetail?->value }}</p>
+                            <p>Qualification: {{ $ad->qualificationn?->value }}</p>
+                            <p>Occupation: {{ $ad->occupationn?->value }}</p>
                             <p>Income: {{ $ad->income }} / Year</p>
                         </div>
                     </div>
