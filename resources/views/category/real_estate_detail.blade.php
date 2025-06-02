@@ -98,6 +98,16 @@
                                 <div class="mb-0">
                                     {!! $ad->description !!}
                                 </div>
+                                <div class="">
+                                    <p>No. of Beds: {{ $ad->number_of_beds }}</p>
+                                    <p>No. of Baths: {{ $ad->number_of_baths }}</p>
+                                    <p>Furnished: {{ $ad->typeDetail?->value }}</p>
+                                    <p>Buildup Area: {{ $ad->buildup_area }}</p>
+                                    <p>Carpet Area: {{ $ad->carpet_area }}</p>
+                                    <p>Number of Floors: {{ $ad->number_of_floors }}</p>
+                                    <p>Facing: {{ $ad->typeDetail?->value }}</p>
+                                    <p>Plot Area: {{ $ad->plot_area }}</p>
+                                </div>
                             </div>
                             <div class="tab-pane show active" id="video" role="tabpanel"></div>
                             <div class="tab-pane" id="specifications" role="tabpanel">
