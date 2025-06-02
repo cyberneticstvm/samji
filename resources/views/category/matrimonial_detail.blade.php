@@ -81,6 +81,15 @@
                         <div class="mb-0">
                             {!! $ad->description !!}
                         </div>
+                        <div class="">
+                            <p>Dob: </p>
+                            <p>Height: </p>
+                            <p>Religion: </p>
+                            <p>Caste: </p>
+                            <p>Qualification: </p>
+                            <p>Occupation: </p>
+                            <p>Income: </p>
+                        </div>
                     </div>
                     <div class="card-body border-top border-bottom py-2">
                         <div class="list-id">
