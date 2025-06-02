@@ -142,7 +142,7 @@
                                     </a>
                                     <p class="mb-1">Samji Business Agent</p>
                                     <span class="text-muted">Member Since {{ $ad->user->created_at->format('M Y') }}</span>
-                                    <div> <a href="#" class="btn btn-primary waves-effect waves-light mt-3">See All Businesses</a> </div>
+                                    <div> <a href="{{ route('category.public.info') }}" class="btn btn-primary waves-effect waves-light mt-3">See All Businesses</a> </div>
                                 </div>
                             </div>
                         </div>
