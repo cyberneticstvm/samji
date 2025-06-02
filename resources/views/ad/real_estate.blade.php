@@ -111,6 +111,13 @@
                                 <input type="hidden" name="location_lat" id="location_lat" value="{{ old('location_lat') }}" />
                                 <input type="hidden" name="location_lng" id="location_lng" value="{{ old('location_lng') }}" />
                             </div>
+                            <div class="col-xl-2 mb-3">
+                                <label class="mb-2 form-label">Contact Number <span class="text-danger ms-1">*</span></label>
+                                {{ html()->text('contact_number_1', old('contact_number_1'))->class("form-control ms-0")->maxlength(10)->placeholder("xxxxxxxxxx") }}
+                                @error('contact_number_1')
+                                <small class="text-danger">{{ $errors->first('contact_number_1') }}</small>
+                                @enderror
+                            </div>
                             <div class="row mt-3 mb-3">
                                 <div class="col-xl-12 mb-3">
                                     <span class="text-primary">Applicable for Land & plots</span>
