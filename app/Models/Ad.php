@@ -38,6 +38,26 @@ class Ad extends Model
         return $this->belongsTo(User::class, 'created_by', 'id');
     }
 
+    public function religionn()
+    {
+        return $this->belongsTo(Caste::class, 'religion', 'id');
+    }
+
+    public function castee()
+    {
+        return $this->belongsTo(Caste::class, 'caste', 'id');
+    }
+
+    public function qualificationn()
+    {
+        return $this->belongsTo(Extra::class, 'qualification', 'id');
+    }
+
+    public function occupationn()
+    {
+        return $this->belongsTo(Extra::class, 'occupation', 'id');
+    }
+
     public function cancelled()
     {
         return ($this->deleted_at) ? "<span class='badge bg-danger-transparent text-danger'>Deleted</span>" : "<span class='badge bg-success-transparent text-success'>Active</span>";

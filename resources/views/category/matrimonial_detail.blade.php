@@ -82,13 +82,13 @@
                             {!! $ad->description !!}
                         </div>
                         <div class="">
-                            <p>Dob: </p>
-                            <p>Height: </p>
-                            <p>Religion: </p>
-                            <p>Caste: </p>
-                            <p>Qualification: </p>
-                            <p>Occupation: </p>
-                            <p>Income: </p>
+                            <p>Dob: {{ $ad->dob->format('d.M.Y') }}</p>
+                            <p>Height: {{ $ad->height }} CM</p>
+                            <p>Religion: {{ $ad->religionn?->name }}</p>
+                            <p>Caste: {{ $ad->castee?->name }}</p>
+                            <p>Qualification: {{ $ad->qualificationn?->name }}</p>
+                            <p>Occupation: {{ $ad->occupationn?->name }}</p>
+                            <p>Income: {{ $ad->income }} / Year</p>
                         </div>
                     </div>
                     <div class="card-body border-top border-bottom py-2">
